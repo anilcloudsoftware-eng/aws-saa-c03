@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CKA (Certified Kubernetes Administrator) Learning Roadmap — A structured path through Kubernetes cluster administration and architecture." />
+  <title>CKA Learning Roadmap — Cloud Learning Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared/css/style.css" />
+  <link rel="stylesheet" href="../shared/css/responsive.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23232F3E'/><text y='.9em' font-size='70' x='50%' text-anchor='middle' dy='.3em' fill='%230073BB' font-family='Inter' font-weight='800'>⎈</text></svg>" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="announcement-bar">
+    <strong>⎈ Certified Kubernetes Administrator (CKA)</strong> · Hands-on cluster administration and architecture
+  </div>
+
+  <header class="navbar" role="banner">
+    <div class="navbar__inner">
+      <a href="../index.html" class="navbar__logo" aria-label="Cloud Learning Portal home">
+        <div class="navbar__logo-icon" aria-hidden="true">CLP</div>
+        <div class="navbar__logo-text">
+          <span class="navbar__logo-name">Cloud Learning Portal</span>
+          <span class="navbar__logo-tagline">Multi-Certification Study Hub</span>
+        </div>
+      </a>
+      <nav class="navbar__nav" role="navigation" aria-label="Main navigation">
+        <a href="../index.html" class="navbar__link">Home</a>
+        <a href="../roadmap.html" class="navbar__link">All Roadmaps</a>
+        <a href="saa-c03.html" class="navbar__link">SAA-C03</a>
+        <a href="cka.html" class="navbar__link active">CKA</a>
+        <a href="#" class="navbar__link" style="opacity:0.5;cursor:not-allowed;">AWS ML (Soon)</a>
+      </nav>
+      <div class="navbar__actions">
+        <span class="navbar__badge">CKA Coming Soon</span>
+        <button class="navbar__hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="navbar__mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="../index.html" class="navbar__mobile-link">🏠 Home</a>
+    <a href="../roadmap.html" class="navbar__mobile-link">🗺️ All Roadmaps</a>
+    <a href="saa-c03.html" class="navbar__mobile-link">☁️ AWS SAA-C03</a>
+    <a href="cka.html" class="navbar__mobile-link">⎈ CKA</a>
+    <a href="#" class="navbar__mobile-link" style="opacity:0.5;cursor:not-allowed;">🤖 AWS ML (Soon)</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- Page Hero -->
+    <div class="page-hero">
+      <div class="container page-hero__inner">
+        <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span class="page-hero__breadcrumb-sep" aria-hidden="true">›</span>
+          <a href="../roadmap.html">All Roadmaps</a>
+          <span class="page-hero__breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="page-hero__breadcrumb-current">CKA</span>
+        </nav>
+        <div class="page-hero__label">⎈ Kubernetes</div>
+        <h1 class="page-hero__title">Certified Kubernetes Administrator Learning Roadmap</h1>
+        <p class="page-hero__subtitle">
+          A hands-on journey through Kubernetes cluster architecture, deployment, management, and troubleshooting.
+          Build the skills to pass the CKA exam and manage production Kubernetes clusters.
+        </p>
+        <div class="page-hero__meta">
+          <span class="badge badge--blue">14 Learning Tracks</span>
+          <span class="badge badge--blue">CKA Aligned</span>
+          <span class="badge badge--gray">In Development</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Roadmap Content -->
+    <section class="section" id="roadmap-tracks" aria-labelledby="tracks-title">
+      <div class="container">
+
+        <div class="section-header fade-in">
+          <div class="section-label">Learning Path</div>
+          <h2 class="section-title" id="tracks-title">14 Tracks to CKA Certification</h2>
+          <p class="section-subtitle">
+            Each track focuses on a specific domain of the CKA exam. Start with fundamentals and progress to advanced cluster management.
+            Content is actively being developed.
+          </p>
+        </div>
+
+        <div class="roadmap__grid stagger">
+          <article class="roadmap-card fade-in">
+            <span class="roadmap-card__number">01</span>
+            <div class="roadmap-card__icon">☁️</div>
+            <h3 class="roadmap-card__title">Kubernetes Fundamentals</h3>
+            <p class="roadmap-card__desc">What is Kubernetes? Architecture overview. Clusters, nodes, control plane. Container runtime. History and evolution of Kubernetes.</p>
+            <span class="roadmap-card__tag roadmap-card__tag--locked">Planned</span>
+          </article>
+
+          <article class="roadmap-card fade-in">
+            <span class="roadmap-card__number">02</span>
+            <div class="roadmap-card__icon">📦</div>
+            <h3 class="roadmap-card__title">Pods & Containers</h3>
+            <p class="roadmap-card__desc">Pod lifecycle. Container images and registries. Resources and limits. Init containers and sidecars. Probes (liveness, readiness, startup).</p>
+            <span class="roadmap-card__tag roadmap-card__tag--locked">Planned</span>
+          </article>
+
+          <article class="roadmap-card fade-in">
+            <span class="roadmap-card__number">03</span>
+            <div class="roadmap-card__icon">🚀</div>
+            <h3 class="roadmap-card__title">Workload Management</h3>
+            <p class="roadmap-card__desc">Deployments, StatefulSets, DaemonSets. ReplicaSets and Pods. Rolling updates and rollbacks. Job and CronJob management.</p>
+            <span class="roadmap-card__tag roadmap-card__tag--locked">Planned</span>
+          </article>
+
+          <article class="roadmap-card fade-in">
+            <span class="roadmap-card__number">04</span>
+            <div class="roadmap-card__icon">🌐</div>
+            <h3 class="roadmap-card__title">Services & Networking</h3>
+            <p class="roadmap-card__desc">Service types (ClusterIP, NodePort, LoadBalancer). Endpoints and DNS. NetworkPolicies. Ingress and Ingress Controllers. Service discovery.</p>
+            <span class="roadmap-card__tag roadmap-card__tag--locked">Planned</span>
+          </article>
+
+          <article class="roadmap-card fade-in">
+            <span class="roadmap-card__number">05</span>
+            <div class="roadmap-card__icon">🔐</div>
+            <h3 class="roadmap-card__title">RBAC & Security</h3>
+            <p class="roadmap-card__desc">Role-Based Access Control (RBAC). Roles, RoleBindings, ClusterRoles, ClusterRoleBindings. Service accounts. Pod Security Policies and Standards.</p>
+            <span class="roadmap-card__tag roadmap-card__tag--locked">Planned</span>
+          </article>
+
+          <article class="roadmap-card fade-in">
+            <span class="roadmap-card__number">06</span>
+            <div class="roadmap-card__icon">💾</div>
+            <h3 class="roadmap-card__title">Storage & Persistence</h3>
+            <p class="roadmap-card__desc">Volumes and persistent volumes. PersistentVolumeClaims. StorageClasses. StatefulSets and data persistence. Backup and restore strategies.</p>
+            <span class="roadmap-card__tag roadmap-card__tag--locked">Planned</span>
+          </article>
+
+          <article class="roadmap-card fade-in">
+            <span class="roadmap-card__number">07</span>
+            <div class="roadmap-card__icon">⚙️</div>
+            <h3 class="roadmap-card__title">Configuration Management</h3>
+            <p class="roadmap-card__desc">ConfigMaps and Secrets. Environment variables. Volume mounts for configuration. Kustomize and templating. Best practices for app configuration.</p>
+            <span class="roadmap-card__tag roadmap-card__tag--locked">Planned</span>
+          </article>
+
+          <article class="roadmap-card fade-in">
+            <span class="roadmap-card__number">08</span>
+            <div class="roadmap-card__icon">📊</div>
+            <h3 class="roadmap-card__title">Monitoring & Logging</h3>
+            <p class="roadmap-card__desc">Kubernetes metrics and monitoring. Logs and log aggregation. Prometheus and monitoring tools. Debugging and observability patterns.</p>
+            <span class="roadmap-card__tag roadmap-card__tag--locked">Planned</span>
+          </article>
+
+          <article class="roadmap-card fade-in">
+            <span class="roadmap-card__number">09</span>
+            <div class="roadmap-card__icon">🛠️</div>
+            <h3 class="roadmap-card__title">Cluster Maintenance</h3>
+            <p class="roadmap-card__desc">Cluster upgrades and patching. Draining and cordoning nodes. Node management. etcd backup and restore. Component updates.</p>
+            <span class="roadmap-card__tag roadmap-card__tag--locked">Planned</span>
+          </article>
+
+          <article class="roadmap-card fade-in">
+            <span class="roadmap-card__number">10</span>
+            <div class="roadmap-card__icon">🔧</div>
+            <h3 class="roadmap-card__title">Troubleshooting</h3>
+            <p class="roadmap-card__desc">Debugging pods and containers. Inspecting cluster state. Common issues and solutions. Network troubleshooting. Application debugging techniques.</p>
+            <span class="roadmap-card__tag roadmap-card__tag--locked">Planned</span>
+          </article>
+
+          <article class="roadmap-card fade-in">
+            <span class="roadmap-card__number">11</span>
+            <div class="roadmap-card__icon">🎯</div>
+            <h3 class="roadmap-card__title">Resource Management</h3>
+            <p class="roadmap-card__desc">Requests and limits. Quality of Service (QoS). Resource quotas and limits. Pod disruption budgets. Capacity planning and scaling.</p>
+            <span class="roadmap-card__tag roadmap-card__tag--locked">Planned</span>
+          </article>
+
+          <article class="roadmap-card fade-in">
+            <span class="roadmap-card__number">12</span>
+            <div class="roadmap-card__icon">🚄</div>
+            <h3 class="roadmap-card__title">Cluster Autoscaling</h3>
+            <p class="roadmap-card__desc">Horizontal Pod Autoscaling (HPA). Vertical Pod Autoscaling (VPA). Cluster Autoscaler. Metrics and triggers for scaling decisions.</p>
+            <span class="roadmap-card__tag roadmap-card__tag--locked">Planned</span>
+          </article>
+
+          <article class="roadmap-card fade-in">
+            <span class="roadmap-card__number">13</span>
+            <div class="roadmap-card__icon">🔄</div>
+            <h3 class="roadmap-card__title">Scheduling & Affinity</h3>
+            <p class="roadmap-card__desc">Kubernetes scheduler. Node affinity and pod affinity. Taints and tolerations. Priority and preemption. Advanced scheduling techniques.</p>
+            <span class="roadmap-card__tag roadmap-card__tag--locked">Planned</span>
+          </article>
+
+          <article class="roadmap-card fade-in">
+            <span class="roadmap-card__number">14</span>
+            <div class="roadmap-card__icon">🎓</div>
+            <h3 class="roadmap-card__title">Exam Preparation</h3>
+            <p class="roadmap-card__desc">Hands-on labs and practice clusters. Common exam scenarios and patterns. Time management strategies. Exam environment and tools. Mock exams.</p>
+            <span class="roadmap-card__tag roadmap-card__tag--locked">Final Stage</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Development Status -->
+    <section class="section section--alt" aria-labelledby="status-title">
+      <div class="container">
+        <div class="section-header section-header--centered fade-in">
+          <p class="section-label">Development Status</p>
+          <h2 class="section-title" id="status-title">CKA Content Coming Soon</h2>
+          <p class="section-subtitle">
+            This roadmap is under active development. Check back soon for complete learning content.
+          </p>
+        </div>
+        <div class="planned-list">
+          <div class="planned-item fade-in">
+            <span class="planned-item__icon">📚</span>
+            <div>
+              <div class="planned-item__title">Detailed Track Pages</div>
+              <div class="planned-item__desc">In-depth content for each of the 14 tracks with examples and explanations.</div>
+            </div>
+          </div>
+          <div class="planned-item fade-in">
+            <span class="planned-item__icon">🔧</span>
+            <div>
+              <div class="planned-item__title">Hands-On Labs</div>
+              <div class="planned-item__desc">Practical Kubernetes exercises and cluster setup instructions.</div>
+            </div>
+          </div>
+          <div class="planned-item fade-in">
+            <span class="planned-item__icon">📋</span>
+            <div>
+              <div class="planned-item__title">Command Reference</div>
+              <div class="planned-item__desc">Essential kubectl commands and their usage patterns.</div>
+            </div>
+          </div>
+          <div class="planned-item fade-in">
+            <span class="planned-item__icon">🎯</span>
+            <div>
+              <div class="planned-item__title">Practice Problems</div>
+              <div class="planned-item__desc">Scenario-based problems mimicking the CKA exam format.</div>
+            </div>
+          </div>
+          <div class="planned-item fade-in">
+            <span class="planned-item__icon">🏗️</span>
+            <div>
+              <div class="planned-item__title">Architecture Patterns</div>
+              <div class="planned-item__desc">Common Kubernetes patterns and best practices for cluster design.</div>
+            </div>
+          </div>
+          <div class="planned-item fade-in">
+            <span class="planned-item__icon">⏱️</span>
+            <div>
+              <div class="planned-item__title">Study Timeline</div>
+              <div class="planned-item__desc">Recommended study schedule based on your target exam date.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer__main">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="../index.html" class="footer__brand-logo" aria-label="Cloud Learning Portal home">
+              <div class="footer__brand-icon" aria-hidden="true">CLP</div>
+              <span class="footer__brand-name">Cloud Learning Portal</span>
+            </a>
+            <p class="footer__brand-desc">
+              A multi-certification study platform covering AWS, Kubernetes, ML and more.
+              Built for learners, by a learner. Free forever.
+            </p>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__col-title">Certifications</h3>
+            <ul class="footer__links">
+              <li><a href="saa-c03.html" class="footer__link">☁️ AWS SAA-C03 <span class="badge badge--orange">Active</span></a></li>
+              <li><a href="cka.html" class="footer__link">⎈ CKA <span class="badge badge--blue">Coming Soon</span></a></li>
+              <li><a href="#" class="footer__link" style="opacity:0.5;cursor:not-allowed;">🤖 AWS ML Specialty <span class="badge badge--gray">Planned</span></a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__col-title">Quick Links</h3>
+            <ul class="footer__links">
+              <li><a href="../roadmap.html" class="footer__link">All Roadmaps</a></li>
+              <li><a href="../index.html" class="footer__link">Home</a></li>
+              <li><a href="../about.html" class="footer__link">About</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__col-title">Official Resources</h3>
+            <ul class="footer__links">
+              <li><a href="https://kubernetes.io/docs/" target="_blank" rel="noopener" class="footer__link footer__link-ext">Kubernetes Docs</a></li>
+              <li><a href="https://www.cncf.io/" target="_blank" rel="noopener" class="footer__link footer__link-ext">CNCF</a></li>
+              <li><a href="https://www.linux.com/training/" target="_blank" rel="noopener" class="footer__link footer__link-ext">Linux Training</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <div class="footer__bottom-inner">
+          <p class="footer__copy">&copy; <span id="footer-year"></span> Cloud Learning Portal. Free &amp; Open Source.</p>
+        </div>
+        <p class="footer__disclaimer">This is an independent learning resource, not affiliated with the Linux Foundation, Cloud Native Computing Foundation, or Kubernetes. Kubernetes is a trademark of the Linux Foundation.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../shared/js/app.js"></script>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
