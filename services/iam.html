@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AWS IAM (Identity and Access Management) — complete study notes covering users, roles, policies, MFA, STS, and exam tips for SAA-C03." />
+  <title>IAM — Identity and Access Management | AWS Learning Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23232F3E'/><text y='.9em' font-size='70' x='12'>☁️</text></svg>" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="announcement-bar">
+    <strong>📚 Currently studying:</strong> IAM — Identity and Access Management &nbsp;·&nbsp;
+    <a href="ec2.html">Next: EC2 →</a>
+  </div>
+
+  <header class="navbar" role="banner">
+    <div class="navbar__inner">
+      <a href="../index.html" class="navbar__logo" aria-label="AWS Learning Portal home">
+        <div class="navbar__logo-icon" aria-hidden="true">AWS</div>
+        <div class="navbar__logo-text">
+          <span class="navbar__logo-name">AWS Learning Portal</span>
+          <span class="navbar__logo-tagline">SAA-C03 Study Hub</span>
+        </div>
+      </a>
+      <nav class="navbar__nav" role="navigation" aria-label="Main navigation">
+        <a href="../index.html"        class="navbar__link">Home</a>
+        <a href="../roadmap.html"      class="navbar__link">Roadmap</a>
+        <a href="../services.html"     class="navbar__link active">AWS Services</a>
+        <a href="../materials.html"    class="navbar__link">Learning Materials</a>
+        <a href="../architecture.html" class="navbar__link">Architecture</a>
+        <a href="../exam-guide.html"   class="navbar__link">Exam Guide</a>
+        <a href="../about.html"        class="navbar__link">About</a>
+        <a href="../contact.html"      class="navbar__link">Contact</a>
+      </nav>
+      <div class="navbar__actions">
+        <span class="navbar__badge">SAA-C03 In Progress</span>
+        <button class="navbar__hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="navbar__mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="../index.html"        class="navbar__mobile-link">🏠 Home</a>
+    <a href="../roadmap.html"      class="navbar__mobile-link">🗺️ Roadmap</a>
+    <a href="../services.html"     class="navbar__mobile-link">⚙️ AWS Services</a>
+    <a href="../materials.html"    class="navbar__mobile-link">📚 Learning Materials</a>
+    <a href="../architecture.html" class="navbar__mobile-link">🏗️ Architecture Patterns</a>
+    <a href="../exam-guide.html"   class="navbar__mobile-link">📝 Exam Guide</a>
+    <a href="../about.html"        class="navbar__mobile-link">ℹ️ About</a>
+    <a href="../contact.html"      class="navbar__mobile-link">✉️ Contact</a>
+  </div>
+
+
+  <main id="main-content">
+
+    <!-- Page Hero -->
+    <div class="page-hero">
+      <div class="container page-hero__inner">
+        <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span class="page-hero__breadcrumb-sep" aria-hidden="true">›</span>
+          <a href="../services.html">AWS Services</a>
+          <span class="page-hero__breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="page-hero__breadcrumb-current">IAM</span>
+        </nav>
+        <div class="page-hero__label">🔐 Security &amp; Identity</div>
+        <h1 class="page-hero__title">IAM — Identity and Access Management</h1>
+        <p class="page-hero__subtitle">
+          Manage access to AWS services and resources securely. Control who is authenticated
+          and authorized to use resources through users, groups, roles, and policies.
+        </p>
+        <div class="page-hero__meta">
+          <span class="badge badge--orange">Security Domain</span>
+          <span class="badge badge--blue">Global Service</span>
+          <span class="badge badge--green">Free</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Content -->
+    <section class="section" id="iam-content">
+      <div class="container">
+        <div class="service-page-layout">
+
+          <!-- Sidebar Navigation -->
+          <aside class="service-sidebar" role="navigation" aria-label="Page sections">
+            <nav class="service-sidebar__nav">
+              <div class="service-sidebar__nav-title">On this page</div>
+              <a href="#introduction" class="service-sidebar__nav-link">Introduction</a>
+              <a href="#why-iam" class="service-sidebar__nav-link">Why IAM?</a>
+              <a href="#core-concepts" class="service-sidebar__nav-link">Core Concepts</a>
+              <a href="#use-cases" class="service-sidebar__nav-link">Use Cases</a>
+              <a href="#best-practices" class="service-sidebar__nav-link">Best Practices</a>
+              <a href="#exam-tips" class="service-sidebar__nav-link">Exam Tips</a>
+              <a href="#related-services" class="service-sidebar__nav-link">Related Services</a>
+            </nav>
+          </aside>
+
+          <!-- Main Content -->
+          <article class="service-content">
+
+            <div class="service-content__section" id="introduction">
+              <h2>Introduction</h2>
+              <p>
+                <strong>AWS Identity and Access Management (IAM)</strong> is a web service that
+                helps you securely control access to AWS resources. IAM allows you to manage
+                users, security credentials, and permissions to determine which AWS services
+                and resources users can access.
+              </p>
+              <p>
+                IAM is a <strong>global service</strong> — it is not tied to any specific AWS region.
+                IAM identities (users, groups, roles) and policies are available across all regions.
+              </p>
+              <p>
+                IAM is provided at <strong>no additional charge</strong>. You are charged only
+                for the AWS resources that your IAM users consume.
+              </p>
+            </div>
+
+            <div class="service-content__section" id="why-iam">
+              <h2>Why do we need IAM?</h2>
+              <p>
+                When you create an AWS account, you start with a single sign-in identity called
+                the <strong>root user</strong>. The root user has complete access to all AWS services
+                and resources in the account — including billing and account closure.
+              </p>
+              <p>
+                Using the root user for everyday tasks is a significant security risk. IAM exists to solve this:
+              </p>
+              <ul style="margin-left: var(--space-6); line-height: var(--leading-relaxed); color: var(--color-text-secondary);">
+                <li style="margin-bottom: var(--space-2);">✓ Create individual users with specific permissions (least privilege)</li>
+                <li style="margin-bottom: var(--space-2);">✓ Grant temporary access to resources without sharing long-term credentials</li>
+                <li style="margin-bottom: var(--space-2);">✓ Control who can access what, from where, and under which conditions</li>
+                <li style="margin-bottom: var(--space-2);">✓ Enable multi-factor authentication (MFA) for additional security</li>
+                <li style="margin-bottom: var(--space-2);">✓ Audit and track access with CloudTrail</li>
+              </ul>
+            </div>
+
+
+            <div class="service-content__section" id="core-concepts">
+              <h2>Core Concepts</h2>
+
+              <h4 style="margin: var(--space-6) 0 var(--space-3); color: var(--color-text-primary);">IAM Users</h4>
+              <p>
+                An <strong>IAM user</strong> is an identity representing a person or application.
+                Users have permanent long-term credentials (passwords and access keys).
+                Best practice: create one IAM user per person — do not share credentials.
+              </p>
+
+              <h4 style="margin: var(--space-6) 0 var(--space-3); color: var(--color-text-primary);">IAM Groups</h4>
+              <p>
+                An <strong>IAM group</strong> is a collection of IAM users. Groups let you assign
+                permissions to multiple users at once. Users can belong to multiple groups.
+                Groups <em>cannot</em> contain other groups — they are flat (one level only).
+              </p>
+
+              <h4 style="margin: var(--space-6) 0 var(--space-3); color: var(--color-text-primary);">IAM Roles</h4>
+              <p>
+                An <strong>IAM role</strong> is an identity with permissions that can be assumed
+                temporarily by users, services, or applications. Unlike users, roles do not have
+                permanent credentials. They generate temporary security tokens via STS.
+              </p>
+              <p>Roles are used when:</p>
+              <ul style="margin-left: var(--space-6); line-height: var(--leading-relaxed); color: var(--color-text-secondary); margin-bottom: var(--space-4);">
+                <li style="margin-bottom: var(--space-2);">An EC2 instance needs to access S3 (attach an instance profile)</li>
+                <li style="margin-bottom: var(--space-2);">A Lambda function needs to write to DynamoDB</li>
+                <li style="margin-bottom: var(--space-2);">Cross-account access is required</li>
+                <li style="margin-bottom: var(--space-2);">Federated identity (SAML, OIDC, Cognito) needs AWS access</li>
+              </ul>
+
+              <h4 style="margin: var(--space-6) 0 var(--space-3); color: var(--color-text-primary);">IAM Policies</h4>
+              <p>
+                An <strong>IAM policy</strong> is a JSON document that defines permissions.
+                Policies specify what actions are allowed or denied on which resources and under
+                which conditions.
+              </p>
+
+              <!-- Policy JSON example -->
+              <div style="background: var(--color-aws-dark); border-radius: var(--radius-lg); padding: var(--space-5); margin: var(--space-4) 0; overflow-x: auto;">
+                <div style="font-size: var(--text-xs); color: rgba(255,255,255,0.4); margin-bottom: var(--space-3); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em;">Example IAM Policy — Read-only access to a specific S3 bucket</div>
+                <pre style="font-family: var(--font-mono); font-size: var(--text-sm); color: #9CDCFE; line-height: 1.6; margin: 0; white-space: pre-wrap;">{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:ListBucket"
+      ],
+      "Resource": [
+        "arn:aws:s3:::my-bucket",
+        "arn:aws:s3:::my-bucket/*"
+      ]
+    }
+  ]
+}</pre>
+              </div>
+
+              <h4 style="margin: var(--space-6) 0 var(--space-3); color: var(--color-text-primary);">Policy Types</h4>
+              <div class="grid grid-2" style="margin-top: var(--space-4);">
+                <div style="background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-4);">
+                  <div style="font-weight: var(--font-semibold); color: var(--color-text-primary); margin-bottom: var(--space-2);">AWS Managed Policies</div>
+                  <p style="font-size: var(--text-sm); margin: 0;">Predefined by AWS. Examples: <code>AdministratorAccess</code>, <code>ReadOnlyAccess</code>, <code>AmazonS3FullAccess</code>. Maintained and updated by AWS.</p>
+                </div>
+                <div style="background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-4);">
+                  <div style="font-weight: var(--font-semibold); color: var(--color-text-primary); margin-bottom: var(--space-2);">Customer Managed Policies</div>
+                  <p style="font-size: var(--text-sm); margin: 0;">Created and managed by you in your AWS account. Reusable and can be attached to multiple identities.</p>
+                </div>
+                <div style="background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-4);">
+                  <div style="font-weight: var(--font-semibold); color: var(--color-text-primary); margin-bottom: var(--space-2);">Inline Policies</div>
+                  <p style="font-size: var(--text-sm); margin: 0;">Embedded directly in a single user, group, or role. Deleted when the identity is deleted. Not reusable.</p>
+                </div>
+                <div style="background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-4);">
+                  <div style="font-weight: var(--font-semibold); color: var(--color-text-primary); margin-bottom: var(--space-2);">Service Control Policies (SCPs)</div>
+                  <p style="font-size: var(--text-sm); margin: 0;">Used with AWS Organizations to restrict the maximum permissions available in member accounts.</p>
+                </div>
+              </div>
+
+              <h4 style="margin: var(--space-6) 0 var(--space-3); color: var(--color-text-primary);">Policy Evaluation Logic</h4>
+              <p>
+                IAM uses an explicit <strong>deny-by-default</strong> model. When evaluating
+                whether a principal can perform an action, AWS follows this order:
+              </p>
+              <ol style="margin-left: var(--space-6); line-height: var(--leading-relaxed); color: var(--color-text-secondary); margin-bottom: var(--space-4);">
+                <li style="margin-bottom: var(--space-2);">1. Is there an explicit <strong>Deny</strong>? → <span style="color: var(--color-accent-red); font-weight: 600;">DENY</span> (always wins)</li>
+                <li style="margin-bottom: var(--space-2);">2. Is there an explicit <strong>Allow</strong>? → <span style="color: var(--color-accent-green); font-weight: 600;">ALLOW</span></li>
+                <li style="margin-bottom: var(--space-2);">3. Default: → <span style="color: var(--color-text-muted); font-weight: 600;">IMPLICIT DENY</span></li>
+              </ol>
+
+              <h4 style="margin: var(--space-6) 0 var(--space-3); color: var(--color-text-primary);">MFA (Multi-Factor Authentication)</h4>
+              <p>
+                MFA adds an extra layer of protection on top of username and password.
+                AWS supports Virtual MFA (Google Authenticator, Authy), U2F hardware keys
+                (YubiKey), and hardware MFA devices.
+              </p>
+              <p>
+                <strong>Best practice:</strong> Enable MFA on the root account and all IAM users
+                with console access. Use IAM conditions to require MFA for sensitive actions.
+              </p>
+
+              <h4 style="margin: var(--space-6) 0 var(--space-3); color: var(--color-text-primary);">Access Keys</h4>
+              <p>
+                Access keys (Access Key ID + Secret Access Key) are used for programmatic access
+                to AWS (CLI, SDK). Key rules to remember:
+              </p>
+              <ul style="margin-left: var(--space-6); line-height: var(--leading-relaxed); color: var(--color-text-secondary);">
+                <li style="margin-bottom: var(--space-2);">Each IAM user can have a maximum of <strong>2 access keys</strong></li>
+                <li style="margin-bottom: var(--space-2);">Access keys are only visible once at creation — rotate them regularly</li>
+                <li style="margin-bottom: var(--space-2);">Never commit access keys to source code or store in public repositories</li>
+                <li style="margin-bottom: var(--space-2);">For EC2/Lambda, use IAM roles — not access keys</li>
+              </ul>
+            </div>
+
+
+            <div class="service-content__section" id="use-cases">
+              <h2>Real-world Use Cases</h2>
+
+              <div class="planned-list" style="margin: var(--space-4) 0;">
+                <div class="planned-item">
+                  <span class="planned-item__icon">🏢</span>
+                  <div>
+                    <div class="planned-item__title">Team access management</div>
+                    <div class="planned-item__desc">Create groups for Dev, QA, and Ops. Assign policies to groups so each team gets the access they need — nothing more.</div>
+                  </div>
+                </div>
+                <div class="planned-item">
+                  <span class="planned-item__icon">🤖</span>
+                  <div>
+                    <div class="planned-item__title">EC2 accessing S3</div>
+                    <div class="planned-item__desc">Attach an IAM role with S3 permissions to an EC2 instance profile. The app can access S3 without hardcoding credentials.</div>
+                  </div>
+                </div>
+                <div class="planned-item">
+                  <span class="planned-item__icon">🔄</span>
+                  <div>
+                    <div class="planned-item__title">Cross-account access</div>
+                    <div class="planned-item__desc">A developer in Account A assumes a role in Account B to access resources. Enables central logging, security, or deployment accounts.</div>
+                  </div>
+                </div>
+                <div class="planned-item">
+                  <span class="planned-item__icon">🌐</span>
+                  <div>
+                    <div class="planned-item__title">Federated identity (SSO)</div>
+                    <div class="planned-item__desc">Allow corporate Active Directory users to sign in to AWS via SAML federation without creating individual IAM users.</div>
+                  </div>
+                </div>
+                <div class="planned-item">
+                  <span class="planned-item__icon">📱</span>
+                  <div>
+                    <div class="planned-item__title">Mobile app access (Cognito)</div>
+                    <div class="planned-item__desc">Use Cognito Identity Pools to grant mobile app users temporary IAM credentials to directly access AWS resources like S3 or DynamoDB.</div>
+                  </div>
+                </div>
+                <div class="planned-item">
+                  <span class="planned-item__icon">🔐</span>
+                  <div>
+                    <div class="planned-item__title">CI/CD pipeline permissions</div>
+                    <div class="planned-item__desc">Grant a GitHub Actions workflow a role (via OIDC) to deploy to AWS without storing access keys as secrets.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-content__section" id="best-practices">
+              <h2>Best Practices</h2>
+
+              <div style="display: flex; flex-direction: column; gap: var(--space-4);">
+                <div style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-4); background: rgba(29,131,72,0.06); border: 1px solid rgba(29,131,72,0.2); border-radius: var(--radius-lg);">
+                  <span style="font-size: 1.25rem; flex-shrink: 0;">🔒</span>
+                  <div>
+                    <div style="font-weight: var(--font-semibold); color: var(--color-text-primary); margin-bottom: var(--space-1);">Lock down the root account</div>
+                    <div style="font-size: var(--text-sm); color: var(--color-text-secondary);">Enable MFA on root. Create an IAM admin user for daily use. Do not create access keys for root. Store root credentials in a password manager.</div>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-4); background: rgba(29,131,72,0.06); border: 1px solid rgba(29,131,72,0.2); border-radius: var(--radius-lg);">
+                  <span style="font-size: 1.25rem; flex-shrink: 0;">📏</span>
+                  <div>
+                    <div style="font-weight: var(--font-semibold); color: var(--color-text-primary); margin-bottom: var(--space-1);">Apply the principle of least privilege</div>
+                    <div style="font-size: var(--text-sm); color: var(--color-text-secondary);">Grant only the permissions needed to perform a task. Start with minimal permissions and add more as needed. Use IAM Access Analyzer to identify over-permissive policies.</div>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-4); background: rgba(29,131,72,0.06); border: 1px solid rgba(29,131,72,0.2); border-radius: var(--radius-lg);">
+                  <span style="font-size: 1.25rem; flex-shrink: 0;">👥</span>
+                  <div>
+                    <div style="font-weight: var(--font-semibold); color: var(--color-text-primary); margin-bottom: var(--space-1);">Use groups to manage permissions</div>
+                    <div style="font-size: var(--text-sm); color: var(--color-text-secondary);">Never attach policies directly to individual users. Assign users to groups and attach policies to groups. Makes permission management much easier at scale.</div>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-4); background: rgba(29,131,72,0.06); border: 1px solid rgba(29,131,72,0.2); border-radius: var(--radius-lg);">
+                  <span style="font-size: 1.25rem; flex-shrink: 0;">🔑</span>
+                  <div>
+                    <div style="font-weight: var(--font-semibold); color: var(--color-text-primary); margin-bottom: var(--space-1);">Use roles, not access keys</div>
+                    <div style="font-size: var(--text-sm); color: var(--color-text-secondary);">For AWS services (EC2, Lambda, ECS), always use IAM roles. For CI/CD, use OIDC-based role assumption. Rotate access keys regularly and audit unused ones with the IAM credential report.</div>
+                  </div>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-4); background: rgba(29,131,72,0.06); border: 1px solid rgba(29,131,72,0.2); border-radius: var(--radius-lg);">
+                  <span style="font-size: 1.25rem; flex-shrink: 0;">📋</span>
+                  <div>
+                    <div style="font-weight: var(--font-semibold); color: var(--color-text-primary); margin-bottom: var(--space-1);">Set a strong password policy</div>
+                    <div style="font-size: var(--text-sm); color: var(--color-text-secondary);">Configure an account-wide IAM password policy: minimum length, complexity requirements, rotation period, and prevent password reuse.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="service-content__section" id="exam-tips">
+              <h2>Exam Tips — SAA-C03</h2>
+
+              <div style="display: flex; flex-direction: column; gap: var(--space-3);">
+
+                <div style="background: rgba(255,153,0,0.06); border: 1px solid rgba(255,153,0,0.2); border-left: 4px solid var(--color-aws-orange); border-radius: var(--radius-md); padding: var(--space-4);">
+                  <div style="font-weight: var(--font-semibold); color: var(--color-text-primary); margin-bottom: var(--space-1);">💡 IAM is global</div>
+                  <div style="font-size: var(--text-sm); color: var(--color-text-secondary);">IAM users, groups, roles and policies are global — not region-specific. This comes up in questions about cross-region access.</div>
+                </div>
+
+                <div style="background: rgba(255,153,0,0.06); border: 1px solid rgba(255,153,0,0.2); border-left: 4px solid var(--color-aws-orange); border-radius: var(--radius-md); padding: var(--space-4);">
+                  <div style="font-weight: var(--font-semibold); color: var(--color-text-primary); margin-bottom: var(--space-1);">💡 Explicit Deny always wins</div>
+                  <div style="font-size: var(--text-sm); color: var(--color-text-secondary);">If a policy has an explicit Deny for an action, it overrides any Allow — regardless of how many other policies grant it. This is the most tested IAM concept.</div>
+                </div>
+
+                <div style="background: rgba(255,153,0,0.06); border: 1px solid rgba(255,153,0,0.2); border-left: 4px solid var(--color-aws-orange); border-radius: var(--radius-md); padding: var(--space-4);">
+                  <div style="font-weight: var(--font-semibold); color: var(--color-text-primary); margin-bottom: var(--space-1);">💡 Roles for AWS services, not access keys</div>
+                  <div style="font-size: var(--text-sm); color: var(--color-text-secondary);">Any question asking "how should an EC2 instance securely access S3?" — the answer is an IAM role attached as an instance profile. Never hardcoded credentials.</div>
+                </div>
+
+                <div style="background: rgba(255,153,0,0.06); border: 1px solid rgba(255,153,0,0.2); border-left: 4px solid var(--color-aws-orange); border-radius: var(--radius-md); padding: var(--space-4);">
+                  <div style="font-weight: var(--font-semibold); color: var(--color-text-primary); margin-bottom: var(--space-1);">💡 Groups cannot contain groups</div>
+                  <div style="font-size: var(--text-sm); color: var(--color-text-secondary);">IAM groups are flat — you cannot nest a group inside another group. Users belong to groups; groups cannot have sub-groups.</div>
+                </div>
+
+                <div style="background: rgba(255,153,0,0.06); border: 1px solid rgba(255,153,0,0.2); border-left: 4px solid var(--color-aws-orange); border-radius: var(--radius-md); padding: var(--space-4);">
+                  <div style="font-weight: var(--font-semibold); color: var(--color-text-primary); margin-bottom: var(--space-1);">💡 STS &amp; AssumeRole for cross-account</div>
+                  <div style="font-size: var(--text-sm); color: var(--color-text-secondary);">Cross-account access scenarios always involve IAM roles and <code>sts:AssumeRole</code>. A trust policy on the target account's role must explicitly allow the source account/principal.</div>
+                </div>
+
+                <div style="background: rgba(255,153,0,0.06); border: 1px solid rgba(255,153,0,0.2); border-left: 4px solid var(--color-aws-orange); border-radius: var(--radius-md); padding: var(--space-4);">
+                  <div style="font-weight: var(--font-semibold); color: var(--color-text-primary); margin-bottom: var(--space-1);">💡 Know the credential report &amp; Access Advisor</div>
+                  <div style="font-size: var(--text-sm); color: var(--color-text-secondary);">The IAM Credential Report lists all users and their credential status. Access Advisor shows which services a user has accessed, helping identify unused permissions.</div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="service-content__section" id="related-services">
+              <h2>Related Services</h2>
+              <div class="grid grid-3">
+                <a href="kms.html" style="text-decoration: none;">
+                  <div style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-4); transition: box-shadow 0.2s, border-color 0.2s;">
+                    <div style="font-size: 1.5rem; margin-bottom: var(--space-2);">🔑</div>
+                    <div style="font-weight: var(--font-semibold); color: var(--color-text-primary); margin-bottom: var(--space-1);">KMS</div>
+                    <div style="font-size: var(--text-sm); color: var(--color-text-muted);">Key Management Service for encryption. IAM policies control who can use KMS keys.</div>
+                  </div>
+                </a>
+                <a href="cloudtrail.html" style="text-decoration: none;">
+                  <div style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-4); transition: box-shadow 0.2s, border-color 0.2s;">
+                    <div style="font-size: 1.5rem; margin-bottom: var(--space-2);">🕵️</div>
+                    <div style="font-weight: var(--font-semibold); color: var(--color-text-primary); margin-bottom: var(--space-1);">CloudTrail</div>
+                    <div style="font-size: var(--text-sm); color: var(--color-text-muted);">Logs all IAM API calls — who did what, when, and from where.</div>
+                  </div>
+                </a>
+                <a href="ssm.html" style="text-decoration: none;">
+                  <div style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-4); transition: box-shadow 0.2s, border-color 0.2s;">
+                    <div style="font-size: 1.5rem; margin-bottom: var(--space-2);">🔧</div>
+                    <div style="font-weight: var(--font-semibold); color: var(--color-text-primary); margin-bottom: var(--space-1);">Systems Manager</div>
+                    <div style="font-size: var(--text-sm); color: var(--color-text-muted);">Uses IAM roles for EC2 instance management. Parameter Store integrates with IAM policies.</div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Navigation between service pages -->
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: var(--space-12); padding-top: var(--space-8); border-top: 1px solid var(--color-border-light);">
+                <div></div>
+                <a href="ec2.html" class="btn btn--primary">
+                  Next: EC2
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+
+          </article><!-- /.service-content -->
+        </div><!-- /.service-page-layout -->
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer__main">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="../index.html" class="footer__brand-logo" aria-label="AWS Learning Portal home">
+              <div class="footer__brand-icon" aria-hidden="true">AWS</div>
+              <span class="footer__brand-name">AWS Learning Portal</span>
+            </a>
+            <p class="footer__brand-desc">A community-driven learning portal for AWS certification preparation.</p>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__col-title">AWS Services</h3>
+            <ul class="footer__links">
+              <li><a href="iam.html" class="footer__link">IAM</a></li>
+              <li><a href="ec2.html" class="footer__link">EC2</a></li>
+              <li><a href="s3.html"  class="footer__link">S3</a></li>
+              <li><a href="vpc.html" class="footer__link">VPC</a></li>
+              <li><a href="../services.html" class="footer__link">All Services →</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__col-title">Quick Links</h3>
+            <ul class="footer__links">
+              <li><a href="../roadmap.html"    class="footer__link">Roadmap</a></li>
+              <li><a href="../exam-guide.html" class="footer__link">Exam Guide</a></li>
+              <li><a href="../about.html"      class="footer__link">About</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__col-title">Official AWS</h3>
+            <ul class="footer__links">
+              <li><a href="https://docs.aws.amazon.com/iam/" target="_blank" rel="noopener noreferrer" class="footer__link footer__link-ext">IAM Documentation</a></li>
+              <li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html" target="_blank" rel="noopener noreferrer" class="footer__link footer__link-ext">IAM Best Practices</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <div class="footer__bottom-inner">
+          <p class="footer__copy">&copy; <span id="footer-year"></span> AWS Learning Portal. Built for learners, by a learner.</p>
+        </div>
+        <p class="footer__disclaimer">Independent learning resource. Not affiliated with Amazon Web Services.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AWS Architecture Patterns — Well-Architected Framework, reference architectures, high availability and DR designs." />
+  <title>Architecture Patterns — AWS Learning Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23232F3E'/><text y='.9em' font-size='70' x='12'>☁️</text></svg>" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="announcement-bar"><strong>📚 Currently studying:</strong> AWS SAA-C03 &nbsp;·&nbsp; <a href="services/iam.html">Start with IAM →</a></div>
+
+  <header class="navbar" role="banner">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="AWS Learning Portal home">
+        <div class="navbar__logo-icon" aria-hidden="true">AWS</div>
+        <div class="navbar__logo-text">
+          <span class="navbar__logo-name">AWS Learning Portal</span>
+          <span class="navbar__logo-tagline">SAA-C03 Study Hub</span>
+        </div>
+      </a>
+      <nav class="navbar__nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html"        class="navbar__link">Home</a>
+        <a href="roadmap.html"      class="navbar__link">Roadmap</a>
+        <a href="services.html"     class="navbar__link">AWS Services</a>
+        <a href="materials.html"    class="navbar__link">Learning Materials</a>
+        <a href="architecture.html" class="navbar__link active">Architecture</a>
+        <a href="exam-guide.html"   class="navbar__link">Exam Guide</a>
+        <a href="about.html"        class="navbar__link">About</a>
+        <a href="contact.html"      class="navbar__link">Contact</a>
+      </nav>
+      <div class="navbar__actions">
+        <span class="navbar__badge">SAA-C03 In Progress</span>
+        <button class="navbar__hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="navbar__mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="index.html"        class="navbar__mobile-link">🏠 Home</a>
+    <a href="roadmap.html"      class="navbar__mobile-link">🗺️ Roadmap</a>
+    <a href="services.html"     class="navbar__mobile-link">⚙️ AWS Services</a>
+    <a href="materials.html"    class="navbar__mobile-link">📚 Learning Materials</a>
+    <a href="architecture.html" class="navbar__mobile-link">🏗️ Architecture Patterns</a>
+    <a href="exam-guide.html"   class="navbar__mobile-link">📝 Exam Guide</a>
+    <a href="about.html"        class="navbar__mobile-link">ℹ️ About</a>
+    <a href="contact.html"      class="navbar__mobile-link">✉️ Contact</a>
+  </div>
+
+  <main id="main-content">
+
+    <div class="page-hero">
+      <div class="container page-hero__inner">
+        <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="page-hero__breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="page-hero__breadcrumb-current">Architecture Patterns</span>
+        </nav>
+        <div class="page-hero__label">🏗️ Architecture</div>
+        <h1 class="page-hero__title">Architecture Patterns</h1>
+        <p class="page-hero__subtitle">
+          AWS Well-Architected Framework, reference architectures, high availability designs,
+          disaster recovery strategies, and real-world cloud architecture patterns.
+        </p>
+        <div class="page-hero__meta">
+          <span class="badge badge--orange">6 Well-Architected Pillars</span>
+          <span class="badge badge--blue">Reference Architectures</span>
+          <span class="badge badge--gray">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" aria-labelledby="arch-title">
+      <div class="container">
+        <div class="section-header section-header--centered fade-in">
+          <div class="section-label">Planned Content</div>
+          <h2 class="section-title" id="arch-title">What's coming to this section</h2>
+          <p class="section-subtitle">Architecture content will be added as each pattern is studied and documented.</p>
+        </div>
+
+        <div class="planned-list">
+          <div class="planned-item fade-in">
+            <span class="planned-item__icon">🏛️</span>
+            <div>
+              <div class="planned-item__title">Well-Architected Framework</div>
+              <div class="planned-item__desc">All 6 pillars: Operational Excellence, Security, Reliability, Performance, Cost Optimization, Sustainability.</div>
+            </div>
+          </div>
+          <div class="planned-item fade-in">
+            <span class="planned-item__icon">🌐</span>
+            <div>
+              <div class="planned-item__title">Multi-Tier Web Applications</div>
+              <div class="planned-item__desc">Classic 3-tier (web / app / DB), with ALB, EC2 Auto Scaling, RDS Multi-AZ and CloudFront.</div>
+            </div>
+          </div>
+          <div class="planned-item fade-in">
+            <span class="planned-item__icon">⚡</span>
+            <div>
+              <div class="planned-item__title">Serverless Architecture</div>
+              <div class="planned-item__desc">API Gateway + Lambda + DynamoDB patterns. Event-driven with SQS/SNS and EventBridge.</div>
+            </div>
+          </div>
+          <div class="planned-item fade-in">
+            <span class="planned-item__icon">🔄</span>
+            <div>
+              <div class="planned-item__title">High Availability &amp; DR</div>
+              <div class="planned-item__desc">Active-active, active-passive, pilot light, warm standby, multi-site. RTO/RPO comparisons.</div>
+            </div>
+          </div>
+          <div class="planned-item fade-in">
+            <span class="planned-item__icon">🌍</span>
+            <div>
+              <div class="planned-item__title">Multi-Region Design</div>
+              <div class="planned-item__desc">Global load balancing, Route 53 failover, cross-region replication, and latency optimization.</div>
+            </div>
+          </div>
+          <div class="planned-item fade-in">
+            <span class="planned-item__icon">🔐</span>
+            <div>
+              <div class="planned-item__title">Secure Architecture Patterns</div>
+              <div class="planned-item__desc">Security hub, GuardDuty, WAF + Shield, VPC security layers, and least-privilege patterns.</div>
+            </div>
+          </div>
+          <div class="planned-item fade-in">
+            <span class="planned-item__icon">📊</span>
+            <div>
+              <div class="planned-item__title">Data Lake Architecture</div>
+              <div class="planned-item__desc">S3 + Glue + Athena + Redshift patterns for analytics at scale.</div>
+            </div>
+          </div>
+          <div class="planned-item fade-in">
+            <span class="planned-item__icon">🏗️</span>
+            <div>
+              <div class="planned-item__title">Microservices on AWS</div>
+              <div class="planned-item__desc">ECS / EKS, service discovery, API Gateway, decoupling with SQS and EventBridge.</div>
+            </div>
+          </div>
+          <div class="planned-item fade-in">
+            <span class="planned-item__icon">🔌</span>
+            <div>
+              <div class="planned-item__title">Hybrid Cloud Patterns</div>
+              <div class="planned-item__desc">AWS Direct Connect, Site-to-Site VPN, Storage Gateway, and Outposts integration.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="coming-soon-banner fade-in">
+          <span class="coming-soon-banner__icon" aria-hidden="true">🏗️</span>
+          <h2 class="coming-soon-banner__title">Architecture Diagrams Coming Soon</h2>
+          <p class="coming-soon-banner__text">
+            Each pattern will include a visual architecture diagram, component breakdown,
+            trade-off analysis, and exam-relevant tips.
+          </p>
+          <a href="roadmap.html" class="btn btn--primary">Follow the Roadmap →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer__main">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="index.html" class="footer__brand-logo"><div class="footer__brand-icon" aria-hidden="true">AWS</div><span class="footer__brand-name">AWS Learning Portal</span></a>
+            <p class="footer__brand-desc">A community-driven learning portal for AWS certification preparation.</p>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__col-title">Quick Links</h3>
+            <ul class="footer__links">
+              <li><a href="roadmap.html"    class="footer__link">Roadmap</a></li>
+              <li><a href="services.html"   class="footer__link">AWS Services</a></li>
+              <li><a href="exam-guide.html" class="footer__link">Exam Guide</a></li>
+              <li><a href="about.html"      class="footer__link">About</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__col-title">Official AWS</h3>
+            <ul class="footer__links">
+              <li><a href="https://docs.aws.amazon.com" target="_blank" rel="noopener noreferrer" class="footer__link footer__link-ext">AWS Documentation</a></li>
+              <li><a href="https://aws.amazon.com/architecture/" target="_blank" rel="noopener noreferrer" class="footer__link footer__link-ext">AWS Architecture Center</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <div class="footer__bottom-inner">
+          <p class="footer__copy">&copy; <span id="footer-year"></span> AWS Learning Portal.</p>
+        </div>
+        <p class="footer__disclaimer">Independent learning resource. Not affiliated with Amazon Web Services.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

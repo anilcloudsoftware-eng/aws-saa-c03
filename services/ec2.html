@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AWS EC2 (Elastic Compute Cloud) — study notes covering instance types, pricing, AMIs, Auto Scaling, and exam tips for SAA-C03." />
+  <title>EC2 — Elastic Compute Cloud | AWS Learning Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23232F3E'/><text y='.9em' font-size='70' x='12'>☁️</text></svg>" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="announcement-bar"><strong>📚 Currently studying:</strong> AWS SAA-C03 &nbsp;·&nbsp; <a href="../services.html">Browse All Services →</a></div>
+
+  <header class="navbar" role="banner">
+    <div class="navbar__inner">
+      <a href="../index.html" class="navbar__logo" aria-label="AWS Learning Portal home">
+        <div class="navbar__logo-icon" aria-hidden="true">AWS</div>
+        <div class="navbar__logo-text">
+          <span class="navbar__logo-name">AWS Learning Portal</span>
+          <span class="navbar__logo-tagline">SAA-C03 Study Hub</span>
+        </div>
+      </a>
+      <nav class="navbar__nav" role="navigation" aria-label="Main navigation">
+        <a href="../index.html"        class="navbar__link">Home</a>
+        <a href="../roadmap.html"      class="navbar__link">Roadmap</a>
+        <a href="../services.html"     class="navbar__link active">AWS Services</a>
+        <a href="../materials.html"    class="navbar__link">Learning Materials</a>
+        <a href="../architecture.html" class="navbar__link">Architecture</a>
+        <a href="../exam-guide.html"   class="navbar__link">Exam Guide</a>
+        <a href="../about.html"        class="navbar__link">About</a>
+        <a href="../contact.html"      class="navbar__link">Contact</a>
+      </nav>
+      <div class="navbar__actions">
+        <span class="navbar__badge">SAA-C03 In Progress</span>
+        <button class="navbar__hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="navbar__mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="../index.html"        class="navbar__mobile-link">🏠 Home</a>
+    <a href="../roadmap.html"      class="navbar__mobile-link">🗺️ Roadmap</a>
+    <a href="../services.html"     class="navbar__mobile-link">⚙️ AWS Services</a>
+    <a href="../materials.html"    class="navbar__mobile-link">📚 Learning Materials</a>
+    <a href="../architecture.html" class="navbar__mobile-link">🏗️ Architecture Patterns</a>
+    <a href="../exam-guide.html"   class="navbar__mobile-link">📝 Exam Guide</a>
+    <a href="../about.html"        class="navbar__mobile-link">ℹ️ About</a>
+    <a href="../contact.html"      class="navbar__mobile-link">✉️ Contact</a>
+  </div>
+
+  <main id="main-content">
+
+    <div class="page-hero">
+      <div class="container page-hero__inner">
+        <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span class="page-hero__breadcrumb-sep" aria-hidden="true">›</span>
+          <a href="../services.html">AWS Services</a>
+          <span class="page-hero__breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="page-hero__breadcrumb-current">EC2</span>
+        </nav>
+        <div class="page-hero__label">💻 Compute</div>
+        <h1 class="page-hero__title">EC2 — Elastic Compute Cloud</h1>
+        <p class="page-hero__subtitle">
+          Virtual servers in the cloud. EC2 provides resizable compute capacity with a wide
+          selection of instance types, operating systems, and pricing models.
+        </p>
+        <div class="page-hero__meta">
+          <span class="badge badge--orange">Compute Domain</span>
+          <span class="badge badge--blue">Regional Service</span>
+          <span class="badge badge--gray">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="ec2-content">
+      <div class="container">
+        <div class="service-page-layout">
+
+          <aside class="service-sidebar" role="navigation" aria-label="Page sections">
+            <nav class="service-sidebar__nav">
+              <div class="service-sidebar__nav-title">On this page</div>
+              <a href="#introduction"    class="service-sidebar__nav-link">Introduction</a>
+              <a href="#why-ec2"         class="service-sidebar__nav-link">Why EC2?</a>
+              <a href="#instance-types"  class="service-sidebar__nav-link">Instance Types</a>
+              <a href="#pricing"         class="service-sidebar__nav-link">Pricing Models</a>
+              <a href="#storage"         class="service-sidebar__nav-link">Storage Options</a>
+              <a href="#networking"      class="service-sidebar__nav-link">Networking</a>
+              <a href="#autoscaling"     class="service-sidebar__nav-link">Auto Scaling</a>
+              <a href="#use-cases"       class="service-sidebar__nav-link">Use Cases</a>
+              <a href="#best-practices"  class="service-sidebar__nav-link">Best Practices</a>
+              <a href="#exam-tips"       class="service-sidebar__nav-link">Exam Tips</a>
+              <a href="#related"         class="service-sidebar__nav-link">Related Services</a>
+            </nav>
+          </aside>
+
+          <article class="service-content">
+
+            <div class="coming-soon-banner">
+              <span class="coming-soon-banner__icon" aria-hidden="true">💻</span>
+              <h2 class="coming-soon-banner__title">EC2 Study Notes — Coming Soon</h2>
+              <p class="coming-soon-banner__text">
+                Detailed EC2 notes are being written as part of the Compute track.
+                This page will cover instance types, AMIs, pricing models, Auto Scaling,
+                ELB, placement groups, and SAA-C03 exam tips.
+              </p>
+              <div style="display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;">
+                <a href="iam.html"           class="btn btn--primary">← IAM (Previous)</a>
+                <a href="../roadmap.html"     class="btn btn--ghost">View Roadmap</a>
+              </div>
+            </div>
+
+            <!-- Section placeholders — ready to fill -->
+            <div class="service-content__section" id="introduction">
+              <h2>Introduction</h2>
+              <p style="color: var(--color-text-muted); font-style: italic;">Content coming soon. EC2 is part of the Compute track in the SAA-C03 roadmap.</p>
+            </div>
+
+            <div class="service-content__section" id="why-ec2">
+              <h2>Why EC2?</h2>
+              <p style="color: var(--color-text-muted); font-style: italic;">Content coming soon.</p>
+            </div>
+
+            <div class="service-content__section" id="instance-types">
+              <h2>Instance Types &amp; Families</h2>
+              <p style="color: var(--color-text-muted); font-style: italic;">Will cover: General Purpose, Compute Optimized, Memory Optimized, Storage Optimized, Accelerated Computing. Instance naming convention (e.g., <code>m5.xlarge</code>).</p>
+            </div>
+
+            <div class="service-content__section" id="pricing">
+              <h2>Pricing Models</h2>
+              <p style="color: var(--color-text-muted); font-style: italic;">Will cover: On-Demand, Reserved (Standard vs Convertible), Savings Plans, Spot Instances, Dedicated Hosts, Dedicated Instances, Capacity Reservations.</p>
+            </div>
+
+            <div class="service-content__section" id="storage">
+              <h2>Storage Options</h2>
+              <p style="color: var(--color-text-muted); font-style: italic;">Will cover: Instance Store vs EBS, EBS volume types (gp2 vs gp3, io1/io2, st1, sc1), snapshots, encryption, and multi-attach.</p>
+            </div>
+
+            <div class="service-content__section" id="networking">
+              <h2>Networking</h2>
+              <p style="color: var(--color-text-muted); font-style: italic;">Will cover: Security Groups vs NACLs, Elastic IPs, ENIs, Enhanced Networking (ENA), placement groups (cluster, spread, partition).</p>
+            </div>
+
+            <div class="service-content__section" id="autoscaling">
+              <h2>Auto Scaling &amp; Load Balancing</h2>
+              <p style="color: var(--color-text-muted); font-style: italic;">Will cover: Auto Scaling Groups, scaling policies (target tracking, step, scheduled), Launch Templates, ALB/NLB/CLB, health checks.</p>
+            </div>
+
+            <div class="service-content__section" id="use-cases">
+              <h2>Use Cases</h2>
+              <p style="color: var(--color-text-muted); font-style: italic;">Content coming soon.</p>
+            </div>
+
+            <div class="service-content__section" id="best-practices">
+              <h2>Best Practices</h2>
+              <p style="color: var(--color-text-muted); font-style: italic;">Content coming soon.</p>
+            </div>
+
+            <div class="service-content__section" id="exam-tips">
+              <h2>Exam Tips — SAA-C03</h2>
+              <p style="color: var(--color-text-muted); font-style: italic;">Content coming soon.</p>
+            </div>
+
+            <div class="service-content__section" id="related">
+              <h2>Related Services</h2>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid var(--color-border-light);">
+                <a href="iam.html" class="btn btn--ghost">← IAM</a>
+                <a href="s3.html"  class="btn btn--primary">Next: S3 →</a>
+              </div>
+            </div>
+
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer__main">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="../index.html" class="footer__brand-logo"><div class="footer__brand-icon" aria-hidden="true">AWS</div><span class="footer__brand-name">AWS Learning Portal</span></a>
+            <p class="footer__brand-desc">A community-driven learning portal for AWS certification preparation.</p>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__col-title">AWS Services</h3>
+            <ul class="footer__links">
+              <li><a href="iam.html" class="footer__link">IAM</a></li>
+              <li><a href="ec2.html" class="footer__link">EC2</a></li>
+              <li><a href="s3.html"  class="footer__link">S3</a></li>
+              <li><a href="vpc.html" class="footer__link">VPC</a></li>
+              <li><a href="../services.html" class="footer__link">All Services →</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__col-title">Official AWS</h3>
+            <ul class="footer__links">
+              <li><a href="https://docs.aws.amazon.com/ec2/" target="_blank" rel="noopener noreferrer" class="footer__link footer__link-ext">EC2 Documentation</a></li>
+              <li><a href="https://aws.amazon.com/ec2/pricing/" target="_blank" rel="noopener noreferrer" class="footer__link footer__link-ext">EC2 Pricing</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <div class="footer__bottom-inner"><p class="footer__copy">&copy; <span id="footer-year"></span> AWS Learning Portal.</p></div>
+        <p class="footer__disclaimer">Independent learning resource. Not affiliated with Amazon Web Services.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

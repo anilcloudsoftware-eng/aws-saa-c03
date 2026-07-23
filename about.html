@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About the AWS Learning Portal — a community-driven project documenting the AWS certification learning journey." />
+  <title>About — AWS Learning Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23232F3E'/><text y='.9em' font-size='70' x='12'>☁️</text></svg>" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="announcement-bar"><strong>📚 Currently studying:</strong> AWS SAA-C03 &nbsp;·&nbsp; <a href="services/iam.html">Start with IAM →</a></div>
+
+  <header class="navbar" role="banner">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="AWS Learning Portal home">
+        <div class="navbar__logo-icon" aria-hidden="true">AWS</div>
+        <div class="navbar__logo-text">
+          <span class="navbar__logo-name">AWS Learning Portal</span>
+          <span class="navbar__logo-tagline">SAA-C03 Study Hub</span>
+        </div>
+      </a>
+      <nav class="navbar__nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html"        class="navbar__link">Home</a>
+        <a href="roadmap.html"      class="navbar__link">Roadmap</a>
+        <a href="services.html"     class="navbar__link">AWS Services</a>
+        <a href="materials.html"    class="navbar__link">Learning Materials</a>
+        <a href="architecture.html" class="navbar__link">Architecture</a>
+        <a href="exam-guide.html"   class="navbar__link">Exam Guide</a>
+        <a href="about.html"        class="navbar__link active">About</a>
+        <a href="contact.html"      class="navbar__link">Contact</a>
+      </nav>
+      <div class="navbar__actions">
+        <span class="navbar__badge">SAA-C03 In Progress</span>
+        <button class="navbar__hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="navbar__mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="index.html"        class="navbar__mobile-link">🏠 Home</a>
+    <a href="roadmap.html"      class="navbar__mobile-link">🗺️ Roadmap</a>
+    <a href="services.html"     class="navbar__mobile-link">⚙️ AWS Services</a>
+    <a href="materials.html"    class="navbar__mobile-link">📚 Learning Materials</a>
+    <a href="architecture.html" class="navbar__mobile-link">🏗️ Architecture Patterns</a>
+    <a href="exam-guide.html"   class="navbar__mobile-link">📝 Exam Guide</a>
+    <a href="about.html"        class="navbar__mobile-link">ℹ️ About</a>
+    <a href="contact.html"      class="navbar__mobile-link">✉️ Contact</a>
+  </div>
+
+  <main id="main-content">
+
+    <div class="page-hero">
+      <div class="container page-hero__inner">
+        <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="page-hero__breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="page-hero__breadcrumb-current">About</span>
+        </nav>
+        <div class="page-hero__label">ℹ️ About</div>
+        <h1 class="page-hero__title">About This Project</h1>
+        <p class="page-hero__subtitle">
+          The story behind the AWS Learning Portal — why it was built,
+          what it's trying to achieve, and where it's going.
+        </p>
+      </div>
+    </div>
+
+    <!-- About Content -->
+    <section class="section" id="about-story" aria-labelledby="about-story-title">
+      <div class="container">
+        <div class="about__grid fade-in">
+
+          <div class="about__text">
+            <div class="section-label">The Origin</div>
+            <h2 id="about-story-title">Why this portal exists</h2>
+            <p>
+              This project started with a simple problem: while preparing for the AWS Certified
+              Solutions Architect – Associate exam, most study resources were either too shallow
+              (marketing pages) or too dry (raw documentation). There was no single resource that
+              combined conceptual depth, practical context, and exam relevance in one place.
+            </p>
+            <p>
+              Rather than keeping notes in a private file, the decision was made to build a proper
+              documentation website from scratch — one that could be shared publicly, grow over time,
+              and eventually help other learners facing the same challenge.
+            </p>
+            <p>
+              The goal is to write the resource I wish had existed when starting to study AWS.
+              Every service page, architecture diagram, and cheat sheet is written from a learner's
+              perspective — focusing on what actually matters for understanding and passing the exam.
+            </p>
+
+            <div class="section-label" style="margin-top: var(--space-8);">The Principles</div>
+            <h2>How content is written</h2>
+
+            <div class="about__feature-list">
+              <div class="about__feature">
+                <div class="about__feature-icon" aria-hidden="true">✓</div>
+                <div class="about__feature-text">
+                  <strong>Depth over brevity</strong>
+                  Every service page goes deep — not just "what it is" but why it exists, when to use it, and the trade-offs involved.
+                </div>
+              </div>
+              <div class="about__feature">
+                <div class="about__feature-icon" aria-hidden="true">✓</div>
+                <div class="about__feature-text">
+                  <strong>Exam-aware but not exam-only</strong>
+                  Content is written to build real understanding. Exam tips are included but they're a by-product, not the goal.
+                </div>
+              </div>
+              <div class="about__feature">
+                <div class="about__feature-icon" aria-hidden="true">✓</div>
+                <div class="about__feature-text">
+                  <strong>Architecture thinking</strong>
+                  Services are documented in the context of architecture — how they connect, when to choose them, and real-world patterns.
+                </div>
+              </div>
+              <div class="about__feature">
+                <div class="about__feature-icon" aria-hidden="true">✓</div>
+                <div class="about__feature-text">
+                  <strong>Living documentation</strong>
+                  This portal is never "finished." New content is added continuously as knowledge grows.
+                </div>
+              </div>
+              <div class="about__feature">
+                <div class="about__feature-icon" aria-hidden="true">✓</div>
+                <div class="about__feature-text">
+                  <strong>Always free</strong>
+                  All content is and will remain free to access, read, and share. No paywalls.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Status card -->
+          <div>
+            <div class="status-card" role="region" aria-label="Project status">
+              <div class="status-card__header">
+                <div class="status-card__header-icon" aria-hidden="true">📋</div>
+                <div>
+                  <div class="status-card__header-title">Project Status</div>
+                  <div class="status-card__header-sub">Last updated: <span id="last-updated">Loading…</span></div>
+                </div>
+              </div>
+              <div class="status-card__body">
+                <div class="status-row">
+                  <span class="status-row__label">Version</span>
+                  <span class="status-row__value">v1.0.0</span>
+                </div>
+                <div class="status-row">
+                  <span class="status-row__label">Current Certification</span>
+                  <div class="status-row__value"><span class="status-badge status-badge--in-progress">SAA-C03 In Progress</span></div>
+                </div>
+                <div class="status-row">
+                  <span class="status-row__label">Website Status</span>
+                  <div class="status-row__value"><span class="status-badge status-badge--development">Under Development</span></div>
+                </div>
+                <div class="status-row">
+                  <span class="status-row__label">Services Documented</span>
+                  <span class="status-row__value">1 of 17+</span>
+                </div>
+                <div class="status-row">
+                  <span class="status-row__label">Content License</span>
+                  <div class="status-row__value"><span class="status-badge status-badge--open-source">Open &amp; Free</span></div>
+                </div>
+                <div class="status-row">
+                  <span class="status-row__label">Target Exam</span>
+                  <span class="status-row__value">AWS SAA-C03</span>
+                </div>
+                <div class="status-row">
+                  <span class="status-row__label">Next Milestone</span>
+                  <span class="status-row__value">IAM Deep Dive</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: var(--space-5);">
+              <a href="contact.html" class="btn btn--primary" style="width: 100%; justify-content: center;">Get in Touch →</a>
+            </div>
+            <div style="margin-top: var(--space-3);">
+              <a href="roadmap.html" class="btn btn--ghost" style="width: 100%; justify-content: center;">View Learning Roadmap</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="section section--alt" aria-labelledby="disclaimer-title">
+      <div class="container">
+        <div class="section-header section-header--centered fade-in">
+          <div class="section-label">Legal</div>
+          <h2 class="section-title" id="disclaimer-title">Disclaimer</h2>
+        </div>
+        <div style="max-width: var(--container-prose); margin: 0 auto;" class="fade-in">
+          <p style="margin-bottom: var(--space-4);">
+            This is an independent learning resource created for personal study and knowledge sharing.
+            It is <strong>not affiliated with, endorsed by, or sponsored by Amazon Web Services (AWS)</strong>
+            or Amazon.com, Inc. in any way.
+          </p>
+          <p style="margin-bottom: var(--space-4);">
+            AWS, Amazon Web Services, and all related marks, logos and service names are trademarks of
+            Amazon.com, Inc. or its affiliates. All other trademarks are the property of their respective owners.
+          </p>
+          <p style="margin-bottom: var(--space-4);">
+            All content on this portal is provided for educational purposes only. While every effort is
+            made to ensure accuracy, information may be outdated or incomplete. Always refer to the
+            <a href="https://docs.aws.amazon.com" target="_blank" rel="noopener noreferrer">official AWS documentation</a>
+            for authoritative and up-to-date information.
+          </p>
+          <p>
+            If you find any errors or outdated information, please <a href="contact.html">reach out</a> —
+            corrections are always welcome and appreciated.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer__main">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="index.html" class="footer__brand-logo"><div class="footer__brand-icon" aria-hidden="true">AWS</div><span class="footer__brand-name">AWS Learning Portal</span></a>
+            <p class="footer__brand-desc">A community-driven learning portal for AWS certification preparation.</p>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__col-title">Quick Links</h3>
+            <ul class="footer__links">
+              <li><a href="roadmap.html"  class="footer__link">Roadmap</a></li>
+              <li><a href="services.html" class="footer__link">AWS Services</a></li>
+              <li><a href="exam-guide.html" class="footer__link">Exam Guide</a></li>
+              <li><a href="contact.html"  class="footer__link">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__col-title">Official AWS</h3>
+            <ul class="footer__links">
+              <li><a href="https://docs.aws.amazon.com" target="_blank" rel="noopener noreferrer" class="footer__link footer__link-ext">AWS Documentation</a></li>
+              <li><a href="https://skillbuilder.aws"    target="_blank" rel="noopener noreferrer" class="footer__link footer__link-ext">AWS Skill Builder</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <div class="footer__bottom-inner">
+          <p class="footer__copy">&copy; <span id="footer-year"></span> AWS Learning Portal.</p>
+        </div>
+        <p class="footer__disclaimer">Independent learning resource. Not affiliated with Amazon Web Services.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

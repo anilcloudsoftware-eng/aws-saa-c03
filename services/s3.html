@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AWS S3 (Simple Storage Service) — study notes covering storage classes, lifecycle policies, versioning, replication, and SAA-C03 exam tips." />
+  <title>S3 — Simple Storage Service | AWS Learning Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23232F3E'/><text y='.9em' font-size='70' x='12'>☁️</text></svg>" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="announcement-bar"><strong>📚 Currently studying:</strong> AWS SAA-C03 &nbsp;·&nbsp; <a href="../services.html">Browse All Services →</a></div>
+
+  <header class="navbar" role="banner">
+    <div class="navbar__inner">
+      <a href="../index.html" class="navbar__logo" aria-label="AWS Learning Portal home">
+        <div class="navbar__logo-icon" aria-hidden="true">AWS</div>
+        <div class="navbar__logo-text">
+          <span class="navbar__logo-name">AWS Learning Portal</span>
+          <span class="navbar__logo-tagline">SAA-C03 Study Hub</span>
+        </div>
+      </a>
+      <nav class="navbar__nav" role="navigation" aria-label="Main navigation">
+        <a href="../index.html"        class="navbar__link">Home</a>
+        <a href="../roadmap.html"      class="navbar__link">Roadmap</a>
+        <a href="../services.html"     class="navbar__link active">AWS Services</a>
+        <a href="../materials.html"    class="navbar__link">Learning Materials</a>
+        <a href="../architecture.html" class="navbar__link">Architecture</a>
+        <a href="../exam-guide.html"   class="navbar__link">Exam Guide</a>
+        <a href="../about.html"        class="navbar__link">About</a>
+        <a href="../contact.html"      class="navbar__link">Contact</a>
+      </nav>
+      <div class="navbar__actions">
+        <span class="navbar__badge">SAA-C03 In Progress</span>
+        <button class="navbar__hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="navbar__mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="../index.html"        class="navbar__mobile-link">🏠 Home</a>
+    <a href="../roadmap.html"      class="navbar__mobile-link">🗺️ Roadmap</a>
+    <a href="../services.html"     class="navbar__mobile-link">⚙️ AWS Services</a>
+    <a href="../materials.html"    class="navbar__mobile-link">📚 Learning Materials</a>
+    <a href="../architecture.html" class="navbar__mobile-link">🏗️ Architecture Patterns</a>
+    <a href="../exam-guide.html"   class="navbar__mobile-link">📝 Exam Guide</a>
+    <a href="../about.html"        class="navbar__mobile-link">ℹ️ About</a>
+    <a href="../contact.html"      class="navbar__mobile-link">✉️ Contact</a>
+  </div>
+
+  <main id="main-content">
+
+    <div class="page-hero">
+      <div class="container page-hero__inner">
+        <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span class="page-hero__breadcrumb-sep" aria-hidden="true">›</span>
+          <a href="../services.html">AWS Services</a>
+          <span class="page-hero__breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="page-hero__breadcrumb-current">S3</span>
+        </nav>
+        <div class="page-hero__label">🪣 Storage</div>
+        <h1 class="page-hero__title">S3 — Simple Storage Service</h1>
+        <p class="page-hero__subtitle">
+          Object storage built to store and retrieve any amount of data from anywhere.
+          Industry-leading durability of 99.999999999% (11 nines). The backbone of AWS storage.
+        </p>
+        <div class="page-hero__meta">
+          <span class="badge badge--orange">Storage Domain</span>
+          <span class="badge badge--blue">Global Namespace</span>
+          <span class="badge badge--gray">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="s3-content">
+      <div class="container">
+        <div class="service-page-layout">
+
+          <aside class="service-sidebar" role="navigation" aria-label="Page sections">
+            <nav class="service-sidebar__nav">
+              <div class="service-sidebar__nav-title">On this page</div>
+              <a href="#introduction"     class="service-sidebar__nav-link">Introduction</a>
+              <a href="#why-s3"           class="service-sidebar__nav-link">Why S3?</a>
+              <a href="#buckets-objects"  class="service-sidebar__nav-link">Buckets &amp; Objects</a>
+              <a href="#storage-classes"  class="service-sidebar__nav-link">Storage Classes</a>
+              <a href="#versioning"       class="service-sidebar__nav-link">Versioning</a>
+              <a href="#lifecycle"        class="service-sidebar__nav-link">Lifecycle Policies</a>
+              <a href="#replication"      class="service-sidebar__nav-link">Replication</a>
+              <a href="#security"         class="service-sidebar__nav-link">Security &amp; Encryption</a>
+              <a href="#performance"      class="service-sidebar__nav-link">Performance</a>
+              <a href="#use-cases"        class="service-sidebar__nav-link">Use Cases</a>
+              <a href="#best-practices"   class="service-sidebar__nav-link">Best Practices</a>
+              <a href="#exam-tips"        class="service-sidebar__nav-link">Exam Tips</a>
+              <a href="#related"          class="service-sidebar__nav-link">Related Services</a>
+            </nav>
+          </aside>
+
+          <article class="service-content">
+
+            <div class="coming-soon-banner">
+              <span class="coming-soon-banner__icon" aria-hidden="true">🪣</span>
+              <h2 class="coming-soon-banner__title">S3 Study Notes — Coming Soon</h2>
+              <p class="coming-soon-banner__text">
+                Detailed S3 notes are being written as part of the Storage track.
+                This page will cover storage classes, lifecycle policies, versioning,
+                replication, encryption, access control, and SAA-C03 exam tips.
+              </p>
+              <div style="display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;">
+                <a href="ec2.html"        class="btn btn--ghost">← EC2 (Previous)</a>
+                <a href="../roadmap.html"  class="btn btn--primary">View Roadmap</a>
+              </div>
+            </div>
+
+            <div class="service-content__section" id="introduction">
+              <h2>Introduction</h2>
+              <p style="color: var(--color-text-muted); font-style: italic;">Content coming soon. S3 is part of the Storage track in the SAA-C03 roadmap.</p>
+            </div>
+            <div class="service-content__section" id="why-s3">
+              <h2>Why S3?</h2>
+              <p style="color: var(--color-text-muted); font-style: italic;">Content coming soon.</p>
+            </div>
+            <div class="service-content__section" id="buckets-objects">
+              <h2>Buckets &amp; Objects</h2>
+              <p style="color: var(--color-text-muted); font-style: italic;">Will cover: bucket naming rules, global namespace, key structure, object size limits (up to 5TB), multipart upload, and S3 URLs.</p>
+            </div>
+            <div class="service-content__section" id="storage-classes">
+              <h2>Storage Classes</h2>
+              <p style="color: var(--color-text-muted); font-style: italic;">Will cover: S3 Standard, Intelligent-Tiering, Standard-IA, One Zone-IA, Glacier Instant Retrieval, Glacier Flexible Retrieval, Glacier Deep Archive. Comparisons and when to use each.</p>
+            </div>
+            <div class="service-content__section" id="versioning">
+              <h2>Versioning</h2>
+              <p style="color: var(--color-text-muted); font-style: italic;">Content coming soon.</p>
+            </div>
+            <div class="service-content__section" id="lifecycle">
+              <h2>Lifecycle Policies</h2>
+              <p style="color: var(--color-text-muted); font-style: italic;">Content coming soon. Transition actions vs expiration actions. Minimum days for transitions between storage classes.</p>
+            </div>
+            <div class="service-content__section" id="replication">
+              <h2>Replication (CRR &amp; SRR)</h2>
+              <p style="color: var(--color-text-muted); font-style: italic;">Will cover: Cross-Region Replication vs Same-Region Replication, use cases, versioning requirement, ownership override, replication time control.</p>
+            </div>
+            <div class="service-content__section" id="security">
+              <h2>Security &amp; Encryption</h2>
+              <p style="color: var(--color-text-muted); font-style: italic;">Will cover: Bucket policies, ACLs, Block Public Access, presigned URLs, SSE-S3 / SSE-KMS / SSE-C / DSSE-KMS, in-transit encryption (TLS).</p>
+            </div>
+            <div class="service-content__section" id="performance">
+              <h2>Performance</h2>
+              <p style="color: var(--color-text-muted); font-style: italic;">Will cover: 3,500 PUT/COPY/POST/DELETE and 5,500 GET/HEAD requests per prefix per second. Multipart upload, S3 Transfer Acceleration, byte-range fetches.</p>
+            </div>
+            <div class="service-content__section" id="use-cases">
+              <h2>Use Cases</h2>
+              <p style="color: var(--color-text-muted); font-style: italic;">Content coming soon.</p>
+            </div>
+            <div class="service-content__section" id="best-practices">
+              <h2>Best Practices</h2>
+              <p style="color: var(--color-text-muted); font-style: italic;">Content coming soon.</p>
+            </div>
+            <div class="service-content__section" id="exam-tips">
+              <h2>Exam Tips — SAA-C03</h2>
+              <p style="color: var(--color-text-muted); font-style: italic;">Content coming soon.</p>
+            </div>
+            <div class="service-content__section" id="related">
+              <h2>Related Services</h2>
+              <div style="display: flex; justify-content: space-between; margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid var(--color-border-light);">
+                <a href="ec2.html" class="btn btn--ghost">← EC2</a>
+                <a href="vpc.html" class="btn btn--primary">Next: VPC →</a>
+              </div>
+            </div>
+
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer__main">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="../index.html" class="footer__brand-logo"><div class="footer__brand-icon" aria-hidden="true">AWS</div><span class="footer__brand-name">AWS Learning Portal</span></a>
+            <p class="footer__brand-desc">A community-driven learning portal for AWS certification preparation.</p>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__col-title">AWS Services</h3>
+            <ul class="footer__links">
+              <li><a href="iam.html" class="footer__link">IAM</a></li>
+              <li><a href="ec2.html" class="footer__link">EC2</a></li>
+              <li><a href="s3.html"  class="footer__link">S3</a></li>
+              <li><a href="vpc.html" class="footer__link">VPC</a></li>
+              <li><a href="../services.html" class="footer__link">All Services →</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__col-title">Official AWS</h3>
+            <ul class="footer__links">
+              <li><a href="https://docs.aws.amazon.com/s3/" target="_blank" rel="noopener noreferrer" class="footer__link footer__link-ext">S3 Documentation</a></li>
+              <li><a href="https://aws.amazon.com/s3/storage-classes/" target="_blank" rel="noopener noreferrer" class="footer__link footer__link-ext">S3 Storage Classes</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <div class="footer__bottom-inner"><p class="footer__copy">&copy; <span id="footer-year"></span> AWS Learning Portal.</p></div>
+        <p class="footer__disclaimer">Independent learning resource. Not affiliated with Amazon Web Services.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

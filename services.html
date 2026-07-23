@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AWS Services directory — deep-dive study notes for every service on the SAA-C03 exam." />
+  <title>AWS Services — AWS Learning Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23232F3E'/><text y='.9em' font-size='70' x='12'>☁️</text></svg>" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="announcement-bar">
+    <strong>📚 Currently studying:</strong> AWS Certified Solutions Architect – Associate (SAA-C03) &nbsp;·&nbsp;
+    <a href="services/iam.html">Start with IAM →</a>
+  </div>
+
+  <header class="navbar" role="banner">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="AWS Learning Portal home">
+        <div class="navbar__logo-icon" aria-hidden="true">AWS</div>
+        <div class="navbar__logo-text">
+          <span class="navbar__logo-name">AWS Learning Portal</span>
+          <span class="navbar__logo-tagline">SAA-C03 Study Hub</span>
+        </div>
+      </a>
+      <nav class="navbar__nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html"        class="navbar__link">Home</a>
+        <a href="roadmap.html"      class="navbar__link">Roadmap</a>
+        <a href="services.html"     class="navbar__link active">AWS Services</a>
+        <a href="materials.html"    class="navbar__link">Learning Materials</a>
+        <a href="architecture.html" class="navbar__link">Architecture</a>
+        <a href="exam-guide.html"   class="navbar__link">Exam Guide</a>
+        <a href="about.html"        class="navbar__link">About</a>
+        <a href="contact.html"      class="navbar__link">Contact</a>
+      </nav>
+      <div class="navbar__actions">
+        <span class="navbar__badge">SAA-C03 In Progress</span>
+        <button class="navbar__hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="navbar__mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="index.html"        class="navbar__mobile-link">🏠 Home</a>
+    <a href="roadmap.html"      class="navbar__mobile-link">🗺️ Roadmap</a>
+    <a href="services.html"     class="navbar__mobile-link">⚙️ AWS Services</a>
+    <a href="materials.html"    class="navbar__mobile-link">📚 Learning Materials</a>
+    <a href="architecture.html" class="navbar__mobile-link">🏗️ Architecture Patterns</a>
+    <a href="exam-guide.html"   class="navbar__mobile-link">📝 Exam Guide</a>
+    <a href="about.html"        class="navbar__mobile-link">ℹ️ About</a>
+    <a href="contact.html"      class="navbar__mobile-link">✉️ Contact</a>
+  </div>
+
+  <main id="main-content">
+
+    <div class="page-hero">
+      <div class="container page-hero__inner">
+        <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="page-hero__breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="page-hero__breadcrumb-current">AWS Services</span>
+        </nav>
+        <div class="page-hero__label">⚙️ Service Directory</div>
+        <h1 class="page-hero__title">AWS Services</h1>
+        <p class="page-hero__subtitle">
+          Deep-dive study notes for every AWS service covered in the SAA-C03 exam.
+          Each page covers concepts, architecture diagrams, use cases, best practices and exam tips.
+        </p>
+        <div class="page-hero__meta">
+          <span class="badge badge--orange">17+ Services</span>
+          <span class="badge badge--blue">SAA-C03 Aligned</span>
+          <span class="badge badge--gray">Growing Continuously</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="all-services" aria-labelledby="services-dir-title">
+      <div class="container">
+
+        <div class="section-header fade-in">
+          <div class="section-label">All Services</div>
+          <h2 class="section-title" id="services-dir-title">Service Directory</h2>
+          <p class="section-subtitle">Browse by category. Pages marked with a blue button have active content.</p>
+        </div>
+
+        <div class="services__filter" role="tablist" aria-label="Filter by category">
+          <button class="filter-tab active" data-filter="all"       role="tab" aria-selected="true">All Services</button>
+          <button class="filter-tab" data-filter="security"         role="tab" aria-selected="false">🔐 Security</button>
+          <button class="filter-tab" data-filter="compute"          role="tab" aria-selected="false">💻 Compute</button>
+          <button class="filter-tab" data-filter="storage"          role="tab" aria-selected="false">🗄️ Storage</button>
+          <button class="filter-tab" data-filter="network"          role="tab" aria-selected="false">🌐 Networking</button>
+          <button class="filter-tab" data-filter="database"         role="tab" aria-selected="false">🗃️ Database</button>
+          <button class="filter-tab" data-filter="serverless"       role="tab" aria-selected="false">⚡ Serverless</button>
+          <button class="filter-tab" data-filter="monitoring"       role="tab" aria-selected="false">📊 Monitoring</button>
+        </div>
+
+        <div class="services__grid stagger">
+          <article class="service-card aws-cat--security fade-in" data-category="security">
+            <div class="service-card__icon">🔐</div>
+            <div><div class="service-card__category">Security &amp; Identity</div><h3 class="service-card__name">IAM</h3></div>
+            <p class="service-card__desc">Identity and Access Management — users, groups, roles, and policies.</p>
+            <div class="service-card__footer"><a href="services/iam.html" class="btn btn--outline-blue btn--sm">View Notes →</a></div>
+          </article>
+
+          <article class="service-card aws-cat--compute fade-in" data-category="compute">
+            <div class="service-card__icon">💻</div>
+            <div><div class="service-card__category">Compute</div><h3 class="service-card__name">EC2</h3></div>
+            <p class="service-card__desc">Elastic Compute Cloud — virtual servers with flexible instance types and pricing.</p>
+            <div class="service-card__footer"><a href="services/ec2.html" class="btn btn--coming-soon btn--sm">Coming Soon</a></div>
+          </article>
+
+          <article class="service-card aws-cat--storage fade-in" data-category="storage">
+            <div class="service-card__icon">🪣</div>
+            <div><div class="service-card__category">Storage</div><h3 class="service-card__name">S3</h3></div>
+            <p class="service-card__desc">Simple Storage Service — object storage with 11 nines durability.</p>
+            <div class="service-card__footer"><a href="services/s3.html" class="btn btn--coming-soon btn--sm">Coming Soon</a></div>
+          </article>
+
+          <article class="service-card aws-cat--network fade-in" data-category="network">
+            <div class="service-card__icon">🌐</div>
+            <div><div class="service-card__category">Networking</div><h3 class="service-card__name">VPC</h3></div>
+            <p class="service-card__desc">Virtual Private Cloud — isolated network environments in AWS.</p>
+            <div class="service-card__footer"><a href="services/vpc.html" class="btn btn--coming-soon btn--sm">Coming Soon</a></div>
+          </article>
+
+          <article class="service-card aws-cat--storage fade-in" data-category="storage">
+            <div class="service-card__icon">💾</div>
+            <div><div class="service-card__category">Storage</div><h3 class="service-card__name">EBS</h3></div>
+            <p class="service-card__desc">Elastic Block Store — high-performance block storage for EC2 instances.</p>
+            <div class="service-card__footer"><a href="services/ebs.html" class="btn btn--coming-soon btn--sm">Coming Soon</a></div>
+          </article>
+
+          <article class="service-card aws-cat--storage fade-in" data-category="storage">
+            <div class="service-card__icon">📁</div>
+            <div><div class="service-card__category">Storage</div><h3 class="service-card__name">EFS</h3></div>
+            <p class="service-card__desc">Elastic File System — serverless, scalable NFS shared file system.</p>
+            <div class="service-card__footer"><a href="services/efs.html" class="btn btn--coming-soon btn--sm">Coming Soon</a></div>
+          </article>
+
+          <article class="service-card aws-cat--database fade-in" data-category="database">
+            <div class="service-card__icon">🗄️</div>
+            <div><div class="service-card__category">Database</div><h3 class="service-card__name">RDS</h3></div>
+            <p class="service-card__desc">Relational Database Service — managed MySQL, PostgreSQL, Oracle and SQL Server.</p>
+            <div class="service-card__footer"><a href="services/rds.html" class="btn btn--coming-soon btn--sm">Coming Soon</a></div>
+          </article>
+
+          <article class="service-card aws-cat--database fade-in" data-category="database">
+            <div class="service-card__icon">✨</div>
+            <div><div class="service-card__category">Database</div><h3 class="service-card__name">Aurora</h3></div>
+            <p class="service-card__desc">AWS-native relational database with up to 5x MySQL performance.</p>
+            <div class="service-card__footer"><a href="services/aurora.html" class="btn btn--coming-soon btn--sm">Coming Soon</a></div>
+          </article>
+
+          <article class="service-card aws-cat--database fade-in" data-category="database">
+            <div class="service-card__icon">⚡</div>
+            <div><div class="service-card__category">Database</div><h3 class="service-card__name">DynamoDB</h3></div>
+            <p class="service-card__desc">Fully managed NoSQL key-value database with single-digit millisecond latency.</p>
+            <div class="service-card__footer"><a href="services/dynamodb.html" class="btn btn--coming-soon btn--sm">Coming Soon</a></div>
+          </article>
+
+          <article class="service-card aws-cat--serverless fade-in" data-category="serverless">
+            <div class="service-card__icon">λ</div>
+            <div><div class="service-card__category">Serverless</div><h3 class="service-card__name">Lambda</h3></div>
+            <p class="service-card__desc">Run code without managing servers. Pay only for execution time used.</p>
+            <div class="service-card__footer"><a href="services/lambda.html" class="btn btn--coming-soon btn--sm">Coming Soon</a></div>
+          </article>
+
+          <article class="service-card aws-cat--serverless fade-in" data-category="serverless">
+            <div class="service-card__icon">🚪</div>
+            <div><div class="service-card__category">Serverless</div><h3 class="service-card__name">API Gateway</h3></div>
+            <p class="service-card__desc">Managed service to create, publish and secure REST, HTTP and WebSocket APIs.</p>
+            <div class="service-card__footer"><a href="services/api-gateway.html" class="btn btn--coming-soon btn--sm">Coming Soon</a></div>
+          </article>
+
+          <article class="service-card aws-cat--network fade-in" data-category="network">
+            <div class="service-card__icon">🌍</div>
+            <div><div class="service-card__category">CDN &amp; Networking</div><h3 class="service-card__name">CloudFront</h3></div>
+            <p class="service-card__desc">CDN with 450+ edge locations, DDoS protection and Lambda@Edge.</p>
+            <div class="service-card__footer"><a href="services/cloudfront.html" class="btn btn--coming-soon btn--sm">Coming Soon</a></div>
+          </article>
+
+          <article class="service-card aws-cat--network fade-in" data-category="network">
+            <div class="service-card__icon">🔀</div>
+            <div><div class="service-card__category">Networking</div><h3 class="service-card__name">Route 53</h3></div>
+            <p class="service-card__desc">Scalable DNS with health checks, routing policies and domain registration.</p>
+            <div class="service-card__footer"><a href="services/route53.html" class="btn btn--coming-soon btn--sm">Coming Soon</a></div>
+          </article>
+
+          <article class="service-card aws-cat--monitoring fade-in" data-category="monitoring">
+            <div class="service-card__icon">📊</div>
+            <div><div class="service-card__category">Monitoring</div><h3 class="service-card__name">CloudWatch</h3></div>
+            <p class="service-card__desc">Monitoring and observability — metrics, logs, alarms and dashboards.</p>
+            <div class="service-card__footer"><a href="services/cloudwatch.html" class="btn btn--coming-soon btn--sm">Coming Soon</a></div>
+          </article>
+
+          <article class="service-card aws-cat--security fade-in" data-category="security">
+            <div class="service-card__icon">🕵️</div>
+            <div><div class="service-card__category">Security &amp; Audit</div><h3 class="service-card__name">CloudTrail</h3></div>
+            <p class="service-card__desc">AWS API call logging, auditing, and user activity tracking.</p>
+            <div class="service-card__footer"><a href="services/cloudtrail.html" class="btn btn--coming-soon btn--sm">Coming Soon</a></div>
+          </article>
+
+          <article class="service-card aws-cat--compute fade-in" data-category="compute">
+            <div class="service-card__icon">🔧</div>
+            <div><div class="service-card__category">Management</div><h3 class="service-card__name">Systems Manager</h3></div>
+            <p class="service-card__desc">Operational hub — patch management, parameter store and session manager.</p>
+            <div class="service-card__footer"><a href="services/ssm.html" class="btn btn--coming-soon btn--sm">Coming Soon</a></div>
+          </article>
+
+          <article class="service-card aws-cat--security fade-in" data-category="security">
+            <div class="service-card__icon">🔑</div>
+            <div><div class="service-card__category">Security &amp; Encryption</div><h3 class="service-card__name">KMS</h3></div>
+            <p class="service-card__desc">Key Management Service — create and manage encryption keys across AWS.</p>
+            <div class="service-card__footer"><a href="services/kms.html" class="btn btn--coming-soon btn--sm">Coming Soon</a></div>
+          </article>
+        </div><!-- /.services__grid -->
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer__main">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="index.html" class="footer__brand-logo"><div class="footer__brand-icon" aria-hidden="true">AWS</div><span class="footer__brand-name">AWS Learning Portal</span></a>
+            <p class="footer__brand-desc">A community-driven learning portal for AWS certification preparation.</p>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__col-title">Quick Links</h3>
+            <ul class="footer__links">
+              <li><a href="roadmap.html"      class="footer__link">Roadmap</a></li>
+              <li><a href="materials.html"    class="footer__link">Materials</a></li>
+              <li><a href="exam-guide.html"   class="footer__link">Exam Guide</a></li>
+              <li><a href="about.html"        class="footer__link">About</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__col-title">Official AWS</h3>
+            <ul class="footer__links">
+              <li><a href="https://docs.aws.amazon.com" target="_blank" rel="noopener noreferrer" class="footer__link footer__link-ext">AWS Documentation</a></li>
+              <li><a href="https://skillbuilder.aws"    target="_blank" rel="noopener noreferrer" class="footer__link footer__link-ext">AWS Skill Builder</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <div class="footer__bottom-inner">
+          <p class="footer__copy">&copy; <span id="footer-year"></span> AWS Learning Portal. Built for learners, by a learner.</p>
+        </div>
+        <p class="footer__disclaimer">Independent learning resource. Not affiliated with Amazon Web Services.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

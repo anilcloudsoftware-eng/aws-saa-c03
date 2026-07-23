@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AWS SAA-C03 Exam Guide — domain breakdown, study strategy, exam tips and practice resources." />
+  <title>Exam Guide — AWS Learning Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23232F3E'/><text y='.9em' font-size='70' x='12'>☁️</text></svg>" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="announcement-bar"><strong>📚 Currently studying:</strong> AWS SAA-C03 &nbsp;·&nbsp; <a href="services/iam.html">Start with IAM →</a></div>
+
+  <header class="navbar" role="banner">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="AWS Learning Portal home">
+        <div class="navbar__logo-icon" aria-hidden="true">AWS</div>
+        <div class="navbar__logo-text">
+          <span class="navbar__logo-name">AWS Learning Portal</span>
+          <span class="navbar__logo-tagline">SAA-C03 Study Hub</span>
+        </div>
+      </a>
+      <nav class="navbar__nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html"        class="navbar__link">Home</a>
+        <a href="roadmap.html"      class="navbar__link">Roadmap</a>
+        <a href="services.html"     class="navbar__link">AWS Services</a>
+        <a href="materials.html"    class="navbar__link">Learning Materials</a>
+        <a href="architecture.html" class="navbar__link">Architecture</a>
+        <a href="exam-guide.html"   class="navbar__link active">Exam Guide</a>
+        <a href="about.html"        class="navbar__link">About</a>
+        <a href="contact.html"      class="navbar__link">Contact</a>
+      </nav>
+      <div class="navbar__actions">
+        <span class="navbar__badge">SAA-C03 In Progress</span>
+        <button class="navbar__hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="navbar__mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="index.html"        class="navbar__mobile-link">🏠 Home</a>
+    <a href="roadmap.html"      class="navbar__mobile-link">🗺️ Roadmap</a>
+    <a href="services.html"     class="navbar__mobile-link">⚙️ AWS Services</a>
+    <a href="materials.html"    class="navbar__mobile-link">📚 Learning Materials</a>
+    <a href="architecture.html" class="navbar__mobile-link">🏗️ Architecture Patterns</a>
+    <a href="exam-guide.html"   class="navbar__mobile-link">📝 Exam Guide</a>
+    <a href="about.html"        class="navbar__mobile-link">ℹ️ About</a>
+    <a href="contact.html"      class="navbar__mobile-link">✉️ Contact</a>
+  </div>
+
+  <main id="main-content">
+
+    <div class="page-hero">
+      <div class="container page-hero__inner">
+        <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="page-hero__breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="page-hero__breadcrumb-current">Exam Guide</span>
+        </nav>
+        <div class="page-hero__label">📝 SAA-C03</div>
+        <h1 class="page-hero__title">Exam Guide</h1>
+        <p class="page-hero__subtitle">
+          Everything you need to know about the AWS Certified Solutions Architect – Associate exam.
+          Domain breakdown, study strategy, tips, and what to expect on exam day.
+        </p>
+        <div class="page-hero__meta">
+          <span class="badge badge--orange">SAA-C03</span>
+          <span class="badge badge--blue">65 Questions · 130 mins</span>
+          <span class="badge badge--gray">Pass Score: 720/1000</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Exam Overview -->
+    <section class="section" id="overview" aria-labelledby="exam-overview-title">
+      <div class="container">
+        <div class="section-header fade-in">
+          <div class="section-label">SAA-C03 Overview</div>
+          <h2 class="section-title" id="exam-overview-title">Exam at a Glance</h2>
+        </div>
+
+        <div class="grid grid-4 fade-in stagger" style="margin-bottom: var(--space-12);">
+          <div class="status-card">
+            <div class="status-card__body">
+              <div class="status-row">
+                <span class="status-row__label">Exam Code</span>
+                <span class="status-row__value">SAA-C03</span>
+              </div>
+              <div class="status-row">
+                <span class="status-row__label">Question Format</span>
+                <span class="status-row__value">MCQ &amp; Multi-select</span>
+              </div>
+              <div class="status-row">
+                <span class="status-row__label">Questions</span>
+                <span class="status-row__value">65</span>
+              </div>
+              <div class="status-row">
+                <span class="status-row__label">Duration</span>
+                <span class="status-row__value">130 minutes</span>
+              </div>
+              <div class="status-row">
+                <span class="status-row__label">Passing Score</span>
+                <span class="status-row__value">720 / 1000</span>
+              </div>
+              <div class="status-row">
+                <span class="status-row__label">Exam Fee</span>
+                <span class="status-row__value">$300 USD</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="status-card" style="grid-column: span 3;">
+            <div class="status-card__header">
+              <div class="status-card__header-icon" aria-hidden="true">📊</div>
+              <div>
+                <div class="status-card__header-title">Domain Breakdown</div>
+                <div class="status-card__header-sub">SAA-C03 exam domains and percentage weightings</div>
+              </div>
+            </div>
+            <div class="status-card__body">
+              <div class="status-row">
+                <span class="status-row__label">Domain 1 — Secure Architectures</span>
+                <span class="status-row__value" style="color: var(--color-accent-blue);">30%</span>
+              </div>
+              <div class="status-row">
+                <span class="status-row__label">Domain 2 — Resilient Architectures</span>
+                <span class="status-row__value" style="color: var(--color-accent-blue);">26%</span>
+              </div>
+              <div class="status-row">
+                <span class="status-row__label">Domain 3 — High-Performance Architectures</span>
+                <span class="status-row__value" style="color: var(--color-accent-blue);">24%</span>
+              </div>
+              <div class="status-row">
+                <span class="status-row__label">Domain 4 — Cost-Optimized Architectures</span>
+                <span class="status-row__value" style="color: var(--color-accent-blue);">20%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Planned content -->
+        <div class="section-header section-header--centered fade-in" style="margin-top: var(--space-12);">
+          <div class="section-label">Coming Soon</div>
+          <h2 class="section-title">Detailed Exam Content</h2>
+          <p class="section-subtitle">In-depth guides for each domain are being written alongside the service study notes.</p>
+        </div>
+
+        <div class="planned-list">
+          <div class="planned-item fade-in">
+            <span class="planned-item__icon">🔐</span>
+            <div>
+              <div class="planned-item__title">Domain 1: Secure Architectures</div>
+              <div class="planned-item__desc">IAM, KMS, Security Hub, GuardDuty, WAF, Shield, and secure VPC design patterns.</div>
+            </div>
+          </div>
+          <div class="planned-item fade-in">
+            <span class="planned-item__icon">🔄</span>
+            <div>
+              <div class="planned-item__title">Domain 2: Resilient Architectures</div>
+              <div class="planned-item__desc">Multi-AZ, Multi-region, Auto Scaling, ELB, RDS failover, and disaster recovery tiers.</div>
+            </div>
+          </div>
+          <div class="planned-item fade-in">
+            <span class="planned-item__icon">⚡</span>
+            <div>
+              <div class="planned-item__title">Domain 3: High-Performance Architectures</div>
+              <div class="planned-item__desc">EC2 placement groups, ElastiCache, CloudFront, read replicas, and caching strategies.</div>
+            </div>
+          </div>
+          <div class="planned-item fade-in">
+            <span class="planned-item__icon">💰</span>
+            <div>
+              <div class="planned-item__title">Domain 4: Cost-Optimized Architectures</div>
+              <div class="planned-item__desc">Reserved vs On-Demand vs Spot, S3 lifecycle, right-sizing, and Savings Plans.</div>
+            </div>
+          </div>
+          <div class="planned-item fade-in">
+            <span class="planned-item__icon">📋</span>
+            <div>
+              <div class="planned-item__title">Practice Questions</div>
+              <div class="planned-item__desc">Scenario-based questions for each domain with detailed answer explanations.</div>
+            </div>
+          </div>
+          <div class="planned-item fade-in">
+            <span class="planned-item__icon">⏱️</span>
+            <div>
+              <div class="planned-item__title">Exam Day Strategy</div>
+              <div class="planned-item__desc">Time management, question elimination techniques, and common trap patterns.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer__main">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="index.html" class="footer__brand-logo"><div class="footer__brand-icon" aria-hidden="true">AWS</div><span class="footer__brand-name">AWS Learning Portal</span></a>
+            <p class="footer__brand-desc">A community-driven learning portal for AWS certification preparation.</p>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__col-title">Quick Links</h3>
+            <ul class="footer__links">
+              <li><a href="roadmap.html"  class="footer__link">Roadmap</a></li>
+              <li><a href="services.html" class="footer__link">AWS Services</a></li>
+              <li><a href="materials.html" class="footer__link">Materials</a></li>
+              <li><a href="about.html"    class="footer__link">About</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__col-title">Official AWS</h3>
+            <ul class="footer__links">
+              <li><a href="https://aws.amazon.com/certification/certified-solutions-architect-associate/" target="_blank" rel="noopener noreferrer" class="footer__link footer__link-ext">SAA-C03 Exam Page</a></li>
+              <li><a href="https://skillbuilder.aws" target="_blank" rel="noopener noreferrer" class="footer__link footer__link-ext">AWS Skill Builder</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <div class="footer__bottom-inner">
+          <p class="footer__copy">&copy; <span id="footer-year"></span> AWS Learning Portal.</p>
+        </div>
+        <p class="footer__disclaimer">Independent learning resource. Not affiliated with Amazon Web Services.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
