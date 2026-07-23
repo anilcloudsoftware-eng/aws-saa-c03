@@ -1,0 +1,68 @@
+{
+  "certifications": [
+    {
+      "id": "saa-c03",
+      "code": "SAA-C03",
+      "name": "AWS Solutions Architect – Associate",
+      "platform": "AWS",
+      "icon": "☁️",
+      "color": "--color-aws-orange",
+      "status": "active",
+      "statusLabel": "Active",
+      "shortDesc": "Core AWS services and architecture patterns",
+      "fullDesc": "The most popular AWS certification. Covers core services across compute, storage, networking, databases, security and architecture best practices using the AWS Well-Architected Framework.",
+      "roadmapUrl": "roadmaps/saa-c03.html",
+      "landingUrl": "#",
+      "domains": 6,
+      "tracks": 12,
+      "services": 17,
+      "estimatedHours": 120,
+      "topics": ["IAM", "EC2", "S3", "VPC", "RDS", "Lambda", "CloudFront"],
+      "relatedCerts": ["aws-devops", "aws-solutions-pro"]
+    },
+    {
+      "id": "cka",
+      "code": "CKA",
+      "name": "Certified Kubernetes Administrator",
+      "platform": "CNCF",
+      "icon": "⎈",
+      "color": "--color-accent-blue",
+      "status": "coming-soon",
+      "statusLabel": "Coming Soon",
+      "shortDesc": "Hands-on Kubernetes cluster administration",
+      "fullDesc": "Hands-on exam that validates your ability to deploy, manage and troubleshoot Kubernetes clusters. Covers cluster architecture, workloads, networking, storage and security at the admin level.",
+      "roadmapUrl": "roadmaps/cka.html",
+      "landingUrl": "cka.html",
+      "domains": 5,
+      "tracks": 14,
+      "services": 12,
+      "estimatedHours": 150,
+      "topics": ["Pods", "Deployments", "Services", "RBAC", "Networking", "Storage", "Troubleshooting"],
+      "relatedCerts": ["ckad", "cks"]
+    },
+    {
+      "id": "aws-ml",
+      "code": "MLS-C01",
+      "name": "AWS Machine Learning Specialty",
+      "platform": "AWS",
+      "icon": "🤖",
+      "color": "#6B46C1",
+      "status": "planned",
+      "statusLabel": "Planned",
+      "shortDesc": "Building, training, and deploying ML models on AWS",
+      "fullDesc": "Validates expertise in building, training, tuning and deploying ML models on AWS. Covers SageMaker, data engineering, exploratory data analysis and ML implementation at scale.",
+      "roadmapUrl": "roadmaps/aws-ml.html",
+      "landingUrl": "aws-ml.html",
+      "domains": 4,
+      "tracks": 12,
+      "services": 10,
+      "estimatedHours": 140,
+      "topics": ["SageMaker", "Data Engineering", "Model Training", "Feature Store", "MLOps"],
+      "relatedCerts": ["saa-c03", "data-analytics"]
+    }
+  ],
+  "platforms": {
+    "AWS": "Amazon Web Services",
+    "CNCF": "Cloud Native Computing Foundation"
+  }
+}

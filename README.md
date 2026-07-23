@@ -1,75 +1,76 @@
-# AWS Learning Portal — SAA-C03 Study Hub
+# Cloud Learning Portal — Multi-Certification Study Hub
 
-A professional, self-hosted documentation website for AWS certification preparation.
-Built to document the learning journey through the **AWS Certified Solutions Architect – Associate (SAA-C03)** exam and beyond.
+A professional, self-hosted documentation platform for **multiple certification paths**: AWS Solutions Architect Associate (SAA-C03), Certified Kubernetes Administrator (CKA), AWS Machine Learning Specialty, and more.
 
-> **Status:** Version 1.0 — Under Active Development  
-> **Current Focus:** AWS SAA-C03 Certification  
+Built as a long-term knowledge base—inspired by [AWS Documentation](https://docs.aws.amazon.com), [Kubernetes Docs](https://kubernetes.io/docs), and [HashiCorp Developer](https://developer.hashicorp.com)—designed to evolve as your learning journey progresses.
+
+> **Status:** Version 2.0 — Multi-Certification Platform  
+> **Current Focus:** AWS SAA-C03 (Active) + CKA (In Development)  
 > **Live at:** Open `index.html` in your browser (no server required)
 
 ---
 
 ## What This Is
 
-This is not a simple HTML practice project. It is a long-term knowledge base — inspired by
-[AWS Documentation](https://docs.aws.amazon.com), [HashiCorp Developer](https://developer.hashicorp.com),
-[Microsoft Learn](https://learn.microsoft.com), and [Kubernetes Docs](https://kubernetes.io/docs) —
-designed to grow into a complete AWS learning portal over months and years.
+This is **not a simple study guide or practice project**. It is a growing, professional learning platform that combines:
 
-Every AWS service studied gets a dedicated page with:
+- **Multiple certification tracks** — Each with 12-14 progressive learning paths
+- **Deep-dive service/concept pages** — Not bullet points, but thorough explanations with examples
+- **Architecture patterns** — Real-world designs and best practices
+- **Exam strategies** — Domain breakdowns, question patterns, and time management
+- **Zero dependencies** — No login, no paywall, no build tools — just open in a browser
 
-- Introduction and "why does this service exist?"
-- Core concepts with code examples
-- Architecture diagrams (planned)
-- Real-world use cases
-- Best practices
-- SAA-C03 exam tips
-- Related services and official documentation links
+### Current Certifications
+
+| Certification | Status | Tracks | Content |
+|---|---|---|---|
+| **AWS SAA-C03** | ✅ Active | 12 | Landing page, roadmap, 1 deep-dive service (IAM) |
+| **CKA** | 🔄 In Development | 14 | Roadmap structure, 14 track outlines |
+| **AWS ML Specialty** | 📋 Planned | 12 | To be added in Phase 3 |
 
 ---
 
 ## Project Structure
 
 ```
-aws-saa-c03/
+cloud-learning-portal/
 │
-├── index.html              # Landing page (all 8 sections)
-├── roadmap.html            # SAA-C03 learning roadmap (12 tracks)
-├── services.html           # AWS services directory with category filter
-├── materials.html          # Study notes, cheat sheets, practice questions
+├── index.html              # Landing page — multi-cert platform hero
+├── roadmap.html            # Roadmap hub — all certifications overview
+│
+├── roadmaps/               # Certification-specific roadmaps
+│   ├── saa-c03.html        # AWS SAA-C03 — 12 tracks (ACTIVE)
+│   ├── cka.html            # CKA — 14 tracks (IN DEVELOPMENT)
+│   └── aws-ml.html         # AWS ML — 12 tracks (PLANNED)
+│
+├── services/               # Individual service/concept pages
+│   ├── iam.html            # ✅ AWS IAM — Complete deep-dive
+│   ├── ec2.html            # 🔄 AWS EC2 — Placeholder (structure ready)
+│   ├── s3.html             # 🔄 AWS S3 — Placeholder (structure ready)
+│   ├── vpc.html            # 🔄 AWS VPC — Placeholder (structure ready)
+│   │
+│   ├── k8s-pods.html       # ⏳ Kubernetes Pods — Planned
+│   ├── k8s-deployments.html# ⏳ Kubernetes Deployments — Planned
+│   ├── k8s-services.html   # ⏳ Kubernetes Services — Planned
+│   └── [16+ more services] # Additional AWS and Kubernetes services
+│
+├── shared/                 # Shared assets and utilities
+│   ├── css/
+│   │   ├── style.css       # Design system, all component styles
+│   │   └── responsive.css  # Mobile breakpoints (1280/1024/768/640/480px)
+│   ├── js/
+│   │   └── app.js          # Navigation, animations, filters (no frameworks)
+│   └── data/
+│       └── certifications.json  # Centralized certification metadata
+│
+├── materials.html          # Study notes, cheat sheets, resources
 ├── architecture.html       # Architecture patterns and Well-Architected
-├── exam-guide.html         # SAA-C03 exam overview, domains, strategy
-├── about.html              # Project story, principles, disclaimer
-├── contact.html            # Feedback and contribution form
+├── exam-guide.html         # SAA-C03 exam guide (CKA guide coming)
+├── about.html              # Project story and principles
+├── contact.html            # Feedback form
 │
-├── services/               # Individual AWS service pages
-│   ├── iam.html            # ✅ Complete — IAM deep dive
-│   ├── ec2.html            # 🔄 Placeholder — structure ready
-│   ├── s3.html             # 🔄 Placeholder — structure ready
-│   ├── vpc.html            # 🔄 Placeholder — structure ready
-│   ├── ebs.html            # ⏳ Planned
-│   ├── efs.html            # ⏳ Planned
-│   ├── rds.html            # ⏳ Planned
-│   ├── aurora.html         # ⏳ Planned
-│   ├── dynamodb.html       # ⏳ Planned
-│   ├── lambda.html         # ⏳ Planned
-│   ├── api-gateway.html    # ⏳ Planned
-│   ├── cloudfront.html     # ⏳ Planned
-│   ├── route53.html        # ⏳ Planned
-│   ├── cloudwatch.html     # ⏳ Planned
-│   ├── cloudtrail.html     # ⏳ Planned
-│   ├── ssm.html            # ⏳ Planned
-│   └── kms.html            # ⏳ Planned
-│
-├── css/
-│   ├── style.css           # Design system, all component styles
-│   └── responsive.css      # Breakpoints: 1280 / 1024 / 768 / 640 / 480px
-│
-├── js/
-│   └── app.js              # Navigation, scroll animations, filter, timestamps
-│
-├── images/                 # Screenshots, architecture diagrams (add here)
-├── assets/                 # Fonts, icons, downloadable PDFs (add here)
+├── images/                 # Architecture diagrams (add here)
+├── assets/                 # Downloadable PDFs, cheat sheets
 │
 └── README.md               # This file
 ```
@@ -80,125 +81,155 @@ aws-saa-c03/
 
 ### View Locally
 
-No build tools, no npm, no server required. Just open the file:
+No build tools, no npm, no server required:
 
 ```bash
-# Option 1 — double-click index.html in Finder
-open /path/to/aws-saa-c03/index.html
+# Option 1 — Direct (macOS)
+open /path/to/cloud-learning-portal/index.html
 
-# Option 2 — VS Code Live Server (recommended for development)
-# Install the "Live Server" extension, right-click index.html → Open with Live Server
+# Option 2 — VS Code Live Server (recommended)
+# Install "Live Server" extension → Right-click index.html → Open with Live Server
 
 # Option 3 — Python simple server
-cd aws-saa-c03
+cd cloud-learning-portal
 python3 -m http.server 8080
-# then open http://localhost:8080
+# Then visit http://localhost:8080
 ```
+
+### Browse Certifications
+
+1. **Home** → `index.html` — Platform overview
+2. **All Roadmaps** → `roadmap.html` — Browse all certification paths
+3. **AWS SAA-C03** → `roadmaps/saa-c03.html` — 12-track learning path
+4. **CKA** → `roadmaps/cka.html` — 14-track learning path (in development)
 
 ### Adding a New Service Page
 
-When you study a new AWS service, follow this pattern:
+When you start learning a new service or concept:
 
-1. **Create the file** in `/services/` — copy the structure from `ec2.html` (the cleanest placeholder)
-2. **Add your content** section by section — each section has an `id` anchor already wired to the sidebar
-3. **Update `services.html`** — change the "Coming Soon" button to "View Notes →" with the correct link
-4. **Update `index.html`** — change the service card button on the landing page
-5. **Update this README** — mark the service as ✅ in the project structure above
+1. **Create the file** in `/services/` with the standard template
+2. **Add your content** using these standard sections:
+   - Introduction & Key Facts
+   - Why This Service?
+   - Core Concepts (with code/command examples)
+   - Use Cases (real-world scenarios)
+   - Best Practices
+   - Exam Tips (exam-specific guidance)
+   - Related Services
+3. **Update `roadmaps/[cert].html`** to link to your new page
+4. **Update this README** with the new service status
 
-### Service Page Sections (Standard Template)
+---
 
-Every service page should eventually contain these sections in this order:
+## Development Roadmap
 
-| Section | `id` anchor | Description |
-|---|---|---|
-| Introduction | `#introduction` | What the service is, key facts |
-| Why this service? | `#why-*` | The problem it solves, when to use it |
-| Core Concepts | `#core-concepts` | Key entities, how it works, code examples |
-| Use Cases | `#use-cases` | Real-world scenarios with context |
-| Best Practices | `#best-practices` | AWS Well-Architected aligned guidance |
-| Exam Tips | `#exam-tips` | SAA-C03 specific traps, key facts to memorize |
-| Related Services | `#related` | How it connects to other AWS services |
+### ✅ Phase 1: Multi-Certification Architecture (Complete)
+- [x] Refactored into multi-cert platform structure
+- [x] Created roadmap hub (`roadmap.html`)
+- [x] Moved SAA-C03 to `roadmaps/saa-c03.html`
+- [x] Created `shared/data/certifications.json` metadata
+- [x] Updated navigation and branding
+
+### 🔄 Phase 2: CKA Track Development (In Progress)
+- [x] CKA roadmap outline with 14 tracks
+- [ ] Deep-dive Kubernetes concept pages (k8s-pods.html, k8s-services.html, etc.)
+- [ ] Hands-on lab guides
+- [ ] Command reference pages
+- [ ] Architecture patterns for Kubernetes
+
+### 📋 Phase 3: AWS ML Track + Enhancements (Planned)
+- [ ] AWS ML roadmap with 12 tracks
+- [ ] SageMaker deep-dive pages
+- [ ] ML architecture patterns
+- [ ] Practice labs and examples
+
+### 🎯 Phase 4: Advanced Features (Future)
+- [ ] Search functionality (client-side)
+- [ ] Progress tracking (localStorage)
+- [ ] Practice question bank
+- [ ] Dark mode toggle
+- [ ] Certificate tracking dashboard
 
 ---
 
 ## Design System
 
-The UI is built with a custom CSS design system (no frameworks, no dependencies).
+Built with a custom, lightweight CSS design system (no frameworks, no dependencies).
 
 ### Color Palette
 
-| Token | Value | Usage |
-|---|---|---|
-| `--color-aws-orange` | `#FF9900` | Primary brand, CTAs, highlights |
-| `--color-aws-dark` | `#232F3E` | Navigation, hero, footer backgrounds |
-| `--color-accent-blue` | `#0073BB` | Links, outline buttons, info badges |
-| `--color-accent-green` | `#1D8348` | Success states, "open" badges |
-| `--color-bg` | `#F8F9FA` | Section alternating backgrounds |
-| `--color-text-primary` | `#1A202C` | Headings, body text |
-| `--color-text-secondary` | `#4A5568` | Paragraph text |
-| `--color-text-muted` | `#718096` | Labels, metadata, hints |
+```css
+/* Brand Colors */
+--color-aws-orange:      #FF9900  /* Primary AWS brand */
+--color-aws-dark:        #232F3E  /* Navigation & headers */
+
+/* Certification Colors */
+--color-accent-blue:     #0073BB  /* Kubernetes / Links */
+--color-accent-green:    #1D8348  /* Success states */
+
+/* Semantic */
+--color-bg:              #F8F9FA  /* Section backgrounds */
+--color-text-primary:    #1A202C  /* Headings */
+--color-text-secondary:  #4A5568  /* Body text */
+--color-text-muted:      #718096  /* Labels, hints */
+```
 
 ### Typography
 
-Font: **Inter** (loaded from Google Fonts).  
-Scale: `--text-xs` (0.75rem) → `--text-6xl` (3.75rem).  
-All sizes and weights are CSS custom properties in `style.css`.
+- **Font:** Inter (from Google Fonts)
+- **Scale:** `--text-xs` (0.75rem) → `--text-6xl` (3.75rem)
+- **Weights:** 400 (normal) → 800 (extrabold)
 
-### Key CSS Classes
+### Key Components
 
 ```css
 /* Layout */
-.container          /* max-width 1280px, centered, padded */
-.section            /* standard vertical padding */
-.section--alt       /* light gray background variant */
-.grid-2 / .grid-3 / .grid-4 / .grid-5  /* responsive grid utilities */
+.container              /* max-width 1280px, auto-centered */
+.section                /* vertical padding rhythm */
+.section--alt           /* light background variant */
 
-/* Components */
-.navbar             /* fixed top navigation */
-.page-hero          /* dark header strip for inner pages */
-.roadmap-card       /* learning track cards */
-.service-card       /* AWS service cards with category stripe */
-.material-card      /* resource cards */
-.status-card        /* project status widget */
-.coming-soon-banner /* placeholder content state */
-.planned-list       /* grid of upcoming feature items */
-.service-page-layout /* sidebar + content two-column layout */
+/* Navigation */
+.navbar                 /* sticky top nav with mobile menu */
+
+/* Cards */
+.roadmap-card           /* learning track cards */
+.cert-card              /* certification overview cards */
+.service-card           /* service/concept cards */
+.feature-card           /* feature highlights */
 
 /* Buttons */
 .btn.btn--primary       /* AWS orange, filled */
-.btn.btn--ghost-light   /* transparent, white border (on dark bg) */
-.btn.btn--ghost         /* transparent, gray border (on light bg) */
-.btn.btn--outline-blue  /* blue outline */
-.btn.btn--coming-soon   /* disabled gray state */
+.btn.btn--ghost-light   /* transparent, white text */
+.btn.btn--coming-soon   /* disabled state */
 .btn--sm / .btn--lg     /* size variants */
 
 /* Animations */
-.fade-in            /* opacity + translateY, triggered by IntersectionObserver */
-.stagger            /* adds nth-child transition delays to children */
+.fade-in                /* IntersectionObserver-triggered fade */
+.stagger                /* cascading nth-child delays */
 ```
 
 ---
 
 ## JavaScript Architecture
 
-`app.js` is structured as self-contained IIFE modules — no frameworks, no dependencies.
+`shared/js/app.js` is organized as self-contained IIFE modules with no dependencies:
 
 | Module | Responsibility |
-|---|---|
-| `Navigation` | Sticky scroll class, hamburger toggle, active link highlighting, escape/outside-click close |
-| `ScrollAnimations` | IntersectionObserver-based fade-in for `.fade-in` elements, with fallback |
-| `ProgressBars` | Animates `.hero__progress-fill` bars using `data-width` attribute |
-| `ServiceFilter` | Category filter tabs on services pages using `data-filter` / `data-category` |
-| `Timestamp` | Writes current date to `#last-updated` element |
-| `SmoothScroll` | Anchor link smooth scroll with fixed nav offset compensation |
-| `Accessibility` | Keyboard-only focus rings (hides outlines for mouse, shows for Tab key) |
+|--------|----------------|
+| `Navigation` | Sticky scroll, hamburger toggle, active link highlighting |
+| `ScrollAnimations` | Fade-in animations via IntersectionObserver |
+| `ProgressBars` | Animated progress bar fills |
+| `ServiceFilter` | Category filter for service cards |
+| `Timestamp` | Updates last-modified dates |
+| `SmoothScroll` | Anchor smooth scroll with nav offset |
+| `Accessibility` | Keyboard-only focus rings |
 
 ---
 
 ## SAA-C03 Learning Progress
 
 | Track | Status | Pages |
-|---|---|---|
+|-------|--------|-------|
 | Cloud Fundamentals | 🔄 In Progress | — |
 | Identity & Security | 🔄 In Progress | [IAM](services/iam.html) |
 | Compute | ⏳ Up Next | [EC2](services/ec2.html) |
@@ -214,73 +245,77 @@ All sizes and weights are CSS custom properties in `style.css`.
 
 ---
 
-## Roadmap — What's Planned
+## CKA Learning Progress
 
-### Version 1 (Current)
-- [x] Professional landing page with all sections
-- [x] Full site navigation (all pages linked)
-- [x] IAM deep-dive page (complete content)
-- [x] EC2, S3, VPC placeholder pages (structure ready)
-- [x] Responsive design (desktop through mobile)
-- [x] Scroll animations and interactive service filter
-
-### Version 2 (Next)
-- [ ] Complete EC2 study notes
-- [ ] Complete S3 study notes  
-- [ ] Complete VPC study notes
-- [ ] Architecture diagrams (draw.io or SVG)
-- [ ] Cheat sheet pages (printable PDF-friendly)
-- [ ] Search functionality (client-side, no backend)
-
-### Version 3 (Future)
-- [ ] All 17+ SAA-C03 services documented
-- [ ] Practice question bank (JavaScript quiz engine)
-- [ ] Dark mode toggle
-- [ ] Progress tracking (localStorage)
-- [ ] RSS feed for new content
+| Track | Status | Pages |
+|-------|--------|-------|
+| Kubernetes Fundamentals | 📋 Planned | — |
+| Pods & Containers | 📋 Planned | — |
+| Workload Management | 📋 Planned | [Deployments], [StatefulSets] |
+| Services & Networking | 📋 Planned | — |
+| RBAC & Security | 📋 Planned | — |
+| Storage & Persistence | 📋 Planned | — |
+| Configuration Management | 📋 Planned | — |
+| Monitoring & Logging | 📋 Planned | — |
+| Cluster Maintenance | 📋 Planned | — |
+| Troubleshooting | 📋 Planned | — |
+| Resource Management | 📋 Planned | — |
+| Cluster Autoscaling | 📋 Planned | — |
+| Scheduling & Affinity | 📋 Planned | — |
+| Exam Preparation | 📋 Planned | — |
 
 ---
 
 ## Contributing
 
-Found an error? Have better notes for a service? Want to add content?
+Found a mistake? Want to add content? Have suggestions?
 
-1. Open an issue or pull request on GitHub (once the repo is public)
-2. Use the [contact form](contact.html) to send feedback
-3. All corrections and contributions are credited
+1. **Open a GitHub issue** with your feedback
+2. **Submit a pull request** with improvements
+3. **Use the [contact form](contact.html)** for general feedback
 
 ### Content Standards
 
-- Write for understanding first, exam second
-- Include the "why" — not just "what"  
-- Use concrete examples over abstract descriptions
-- Mark opinion/interpretation clearly
-- Cite official AWS sources where relevant
+- Write for **understanding first**, exam second
+- Include the "**why**" — not just the "what"
+- Use **concrete examples** over abstract descriptions
+- Mark **opinions** clearly when presenting interpretations
+- **Cite official sources** (AWS docs, Kubernetes docs, etc.)
+- Keep a **conversational tone** — this is for learners
 
 ---
 
 ## Disclaimer
 
-This is an independent learning resource. It is **not affiliated with, endorsed by, or sponsored by
-Amazon Web Services (AWS)** or Amazon.com, Inc.
+This is an **independent learning resource**. It is **NOT affiliated with, endorsed by, or sponsored by**:
 
-AWS, Amazon Web Services, and all related service names and logos are trademarks of Amazon.com, Inc.
-All content is provided for educational purposes only. Always verify with
-[official AWS documentation](https://docs.aws.amazon.com) for authoritative information.
+- Amazon Web Services (AWS) or Amazon.com, Inc.
+- The Cloud Native Computing Foundation (CNCF) or Linux Foundation
+- Kubernetes project or related organizations
+
+All trademarks belong to their respective owners. Content is provided for **educational purposes only**. Always verify with official documentation for authoritative information.
 
 ---
 
-## Official AWS Resources
+## Official Resources
 
+### AWS
 | Resource | URL |
-|---|---|
+|----------|-----|
 | AWS Documentation | https://docs.aws.amazon.com |
 | AWS Skill Builder | https://skillbuilder.aws |
 | SAA-C03 Exam Page | https://aws.amazon.com/certification/certified-solutions-architect-associate/ |
 | AWS Whitepapers | https://aws.amazon.com/whitepapers/ |
 | AWS Architecture Center | https://aws.amazon.com/architecture/ |
-| AWS Well-Architected | https://aws.amazon.com/architecture/well-architected/ |
+
+### Kubernetes & CKA
+| Resource | URL |
+|----------|-----|
+| Kubernetes Official Docs | https://kubernetes.io/docs/ |
+| CKA Exam Page | https://www.cncf.io/certification/cka/ |
+| Linux Foundation Training | https://www.linux.com/training/ |
+| Kubernetes GitHub | https://github.com/kubernetes/kubernetes |
 
 ---
 
-*Built for learners, by a learner. Last updated: see `about.html`.*
+**Built for learners, by a learner.** Free forever.

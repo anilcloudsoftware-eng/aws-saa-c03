@@ -3,45 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AWS SAA-C03 Learning Roadmap — A structured path from cloud fundamentals through exam preparation." />
-  <title>Learning Roadmap — AWS Learning Portal</title>
+  <meta name="description" content="Cloud Learning Portal — Browse all available certification roadmaps. AWS SAA-C03, CKA, AWS ML, and more." />
+  <title>All Learning Roadmaps — Cloud Learning Portal</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23232F3E'/><text y='.9em' font-size='70' x='12'>☁️</text></svg>" />
+  <link rel="stylesheet" href="shared/css/style.css" />
+  <link rel="stylesheet" href="shared/css/responsive.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23232F3E'/><text y='.9em' font-size='70' x='50%' text-anchor='middle' dy='.3em' fill='%23FF9900' font-family='Inter' font-weight='800'>☁️</text></svg>" />
 </head>
 <body>
 
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <div class="announcement-bar">
-    <strong>📚 Currently studying:</strong> AWS Certified Solutions Architect – Associate (SAA-C03) &nbsp;·&nbsp;
-    <a href="services/iam.html">Start with IAM →</a>
-  </div>
-
   <header class="navbar" role="banner">
     <div class="navbar__inner">
-      <a href="index.html" class="navbar__logo" aria-label="AWS Learning Portal home">
-        <div class="navbar__logo-icon" aria-hidden="true">AWS</div>
+      <a href="index.html" class="navbar__logo" aria-label="Cloud Learning Portal home">
+        <div class="navbar__logo-icon" aria-hidden="true">CLP</div>
         <div class="navbar__logo-text">
-          <span class="navbar__logo-name">AWS Learning Portal</span>
-          <span class="navbar__logo-tagline">SAA-C03 Study Hub</span>
+          <span class="navbar__logo-name">Cloud Learning Portal</span>
+          <span class="navbar__logo-tagline">Multi-Certification Study Hub</span>
         </div>
       </a>
       <nav class="navbar__nav" role="navigation" aria-label="Main navigation">
-        <a href="index.html"        class="navbar__link">Home</a>
-        <a href="roadmap.html"      class="navbar__link active">Roadmap</a>
-        <a href="services.html"     class="navbar__link">AWS Services</a>
-        <a href="materials.html"    class="navbar__link">Learning Materials</a>
-        <a href="architecture.html" class="navbar__link">Architecture</a>
-        <a href="exam-guide.html"   class="navbar__link">Exam Guide</a>
-        <a href="about.html"        class="navbar__link">About</a>
-        <a href="contact.html"      class="navbar__link">Contact</a>
+        <a href="index.html" class="navbar__link">Home</a>
+        <a href="roadmap.html" class="navbar__link active">Roadmaps</a>
+        <a href="services.html" class="navbar__link">Services</a>
+        <a href="materials.html" class="navbar__link">Materials</a>
+        <a href="about.html" class="navbar__link">About</a>
       </nav>
       <div class="navbar__actions">
-        <span class="navbar__badge">SAA-C03 In Progress</span>
+        <span class="navbar__badge">Multi-Cert Platform</span>
         <button class="navbar__hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
           <span></span><span></span><span></span>
         </button>
@@ -50,14 +42,11 @@
   </header>
 
   <div class="navbar__mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
-    <a href="index.html"        class="navbar__mobile-link">🏠 Home</a>
-    <a href="roadmap.html"      class="navbar__mobile-link">🗺️ Roadmap</a>
-    <a href="services.html"     class="navbar__mobile-link">⚙️ AWS Services</a>
-    <a href="materials.html"    class="navbar__mobile-link">📚 Learning Materials</a>
-    <a href="architecture.html" class="navbar__mobile-link">🏗️ Architecture Patterns</a>
-    <a href="exam-guide.html"   class="navbar__mobile-link">📝 Exam Guide</a>
-    <a href="about.html"        class="navbar__mobile-link">ℹ️ About</a>
-    <a href="contact.html"      class="navbar__mobile-link">✉️ Contact</a>
+    <a href="index.html" class="navbar__mobile-link">🏠 Home</a>
+    <a href="roadmap.html" class="navbar__mobile-link">🗺️ Roadmaps</a>
+    <a href="services.html" class="navbar__mobile-link">⚙️ Services</a>
+    <a href="materials.html" class="navbar__mobile-link">📚 Materials</a>
+    <a href="about.html" class="navbar__mobile-link">ℹ️ About</a>
   </div>
 
   <main id="main-content">
@@ -68,189 +57,188 @@
         <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
           <a href="index.html">Home</a>
           <span class="page-hero__breadcrumb-sep" aria-hidden="true">›</span>
-          <span class="page-hero__breadcrumb-current">Roadmap</span>
+          <span class="page-hero__breadcrumb-current">Roadmaps</span>
         </nav>
-        <div class="page-hero__label">🗺️ Learning Path</div>
-        <h1 class="page-hero__title">SAA-C03 Learning Roadmap</h1>
+        <div class="page-hero__label">🗺️ Learning Paths</div>
+        <h1 class="page-hero__title">All Certification Roadmaps</h1>
         <p class="page-hero__subtitle">
-          A structured, progressive journey through every domain of the AWS Solutions Architect
-          Associate exam. Follow this path to build deep, practical cloud knowledge.
+          Choose a certification below to start your structured learning journey.
+          Each roadmap is divided into progressive tracks that build upon each other.
         </p>
         <div class="page-hero__meta">
-          <span class="badge badge--orange">12 Learning Tracks</span>
-          <span class="badge badge--blue">SAA-C03 Aligned</span>
-          <span class="badge badge--gray">Updated Continuously</span>
+          <span class="badge badge--orange">3 Certifications</span>
+          <span class="badge badge--blue">12-14 Tracks Each</span>
         </div>
       </div>
     </div>
 
-    <!-- Roadmap Content -->
-    <section class="section" id="roadmap-tracks" aria-labelledby="tracks-title">
+    <!-- Roadmaps Grid -->
+    <section class="section" aria-labelledby="roadmaps-title">
       <div class="container">
-
-        <div class="section-header fade-in">
-          <div class="section-label">All Tracks</div>
-          <h2 class="section-title" id="tracks-title">Your Learning Journey</h2>
+        <div class="section-header section-header--centered fade-in">
+          <p class="section-label">Choose Your Path</p>
+          <h2 class="section-title" id="roadmaps-title">Available Learning Roadmaps</h2>
           <p class="section-subtitle">
-            Each track builds on the previous. Start from the top and work your way through.
-            Tracks marked "In Progress" have active content — the rest are coming soon.
+            Each roadmap provides a complete, structured path through every topic needed for certification.
           </p>
         </div>
 
-        <div class="roadmap__grid stagger">
+        <div class="cert-grid stagger" style="margin-bottom: var(--space-16);">
 
-          <article class="roadmap-card fade-in">
-            <span class="roadmap-card__number">01</span>
-            <div class="roadmap-card__icon">☁️</div>
-            <h3 class="roadmap-card__title">Cloud Fundamentals</h3>
-            <p class="roadmap-card__desc">What is cloud computing? AWS global infrastructure — regions, AZs, edge locations. The shared responsibility model. AWS pricing philosophy.</p>
-            <span class="roadmap-card__tag roadmap-card__tag--active">In Progress</span>
+          <!-- AWS SAA-C03 Card -->
+          <article class="cert-card fade-in" aria-label="AWS Solutions Architect Associate">
+            <div class="cert-card__header">
+              <div class="cert-card__icon cert-card__icon--aws">☁️</div>
+              <span class="cert-card__badge cert-card__badge--active">● Active</span>
+            </div>
+            <div class="cert-card__body">
+              <div>
+                <div class="cert-card__name">AWS Solutions Architect – Associate</div>
+                <div class="cert-card__code">SAA-C03</div>
+              </div>
+              <p class="cert-card__desc">
+                The most popular AWS certification. A comprehensive 12-track roadmap covering core services across compute, storage, networking, databases, security and architecture best practices.
+              </p>
+              <div class="cert-card__topics">
+                <span class="cert-card__topic">Compute</span>
+                <span class="cert-card__topic">Storage</span>
+                <span class="cert-card__topic">Networking</span>
+                <span class="cert-card__topic">Databases</span>
+                <span class="cert-card__topic">Security</span>
+                <span class="cert-card__topic">+7 more</span>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__progress-label">Track Progress</span>
+              <div class="cert-card__progress-bar">
+                <div class="cert-card__progress-fill" style="width:17%"></div>
+              </div>
+              <span style="font-size:var(--text-xs);color:var(--color-text-muted);font-weight:var(--font-semibold);">17%</span>
+              <a href="roadmaps/saa-c03.html" class="btn btn--primary btn--sm">View →</a>
+            </div>
           </article>
 
-          <article class="roadmap-card fade-in">
-            <span class="roadmap-card__number">02</span>
-            <div class="roadmap-card__icon">🔐</div>
-            <h3 class="roadmap-card__title">Identity &amp; Security</h3>
-            <p class="roadmap-card__desc">IAM users, groups, roles, policies. MFA, STS, federation. KMS encryption keys. AWS Organizations and SCPs. Security best practices.</p>
-            <span class="roadmap-card__tag roadmap-card__tag--active">In Progress</span>
+          <!-- CKA Card -->
+          <article class="cert-card fade-in" aria-label="Certified Kubernetes Administrator">
+            <div class="cert-card__header">
+              <div class="cert-card__icon cert-card__icon--k8s">⎈</div>
+              <span class="cert-card__badge cert-card__badge--soon">Coming Soon</span>
+            </div>
+            <div class="cert-card__body">
+              <div>
+                <div class="cert-card__name">Certified Kubernetes Administrator</div>
+                <div class="cert-card__code">CKA</div>
+              </div>
+              <p class="cert-card__desc">
+                Hands-on exam that validates your ability to deploy, manage and troubleshoot Kubernetes clusters at the admin level. Comprehensive 14-track roadmap.
+              </p>
+              <div class="cert-card__topics">
+                <span class="cert-card__topic">Pods</span>
+                <span class="cert-card__topic">Services</span>
+                <span class="cert-card__topic">Networking</span>
+                <span class="cert-card__topic">Storage</span>
+                <span class="cert-card__topic">RBAC</span>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__progress-label">Track Progress</span>
+              <div class="cert-card__progress-bar">
+                <div class="cert-card__progress-fill cert-card__progress-fill--blue" style="width:0%"></div>
+              </div>
+              <span style="font-size:var(--text-xs);color:var(--color-text-muted);font-weight:var(--font-semibold);">0%</span>
+              <span class="btn btn--coming-soon btn--sm">Coming Soon</span>
+            </div>
           </article>
 
-          <article class="roadmap-card fade-in">
-            <span class="roadmap-card__number">03</span>
-            <div class="roadmap-card__icon">💻</div>
-            <h3 class="roadmap-card__title">Compute</h3>
-            <p class="roadmap-card__desc">EC2 instance types and purchasing options. AMIs. Elastic Load Balancing. Auto Scaling groups. Placement groups. EC2 Instance Connect.</p>
-            <span class="roadmap-card__tag roadmap-card__tag--soon">Up Next</span>
+          <!-- AWS ML Card -->
+          <article class="cert-card fade-in" aria-label="AWS Machine Learning Specialty">
+            <div class="cert-card__header">
+              <div class="cert-card__icon cert-card__icon--ml">🤖</div>
+              <span class="cert-card__badge cert-card__badge--planned">Planned</span>
+            </div>
+            <div class="cert-card__body">
+              <div>
+                <div class="cert-card__name">AWS Machine Learning Specialty</div>
+                <div class="cert-card__code">MLS-C01</div>
+              </div>
+              <p class="cert-card__desc">
+                Validates expertise in building, training, tuning and deploying ML models on AWS. Comprehensive 12-track roadmap covering SageMaker and ML best practices.
+              </p>
+              <div class="cert-card__topics">
+                <span class="cert-card__topic">SageMaker</span>
+                <span class="cert-card__topic">Data Prep</span>
+                <span class="cert-card__topic">Model Training</span>
+                <span class="cert-card__topic">Feature Store</span>
+                <span class="cert-card__topic">MLOps</span>
+              </div>
+            </div>
+            <div class="cert-card__footer">
+              <span class="cert-card__progress-label">Track Progress</span>
+              <div class="cert-card__progress-bar">
+                <div class="cert-card__progress-fill cert-card__progress-fill--purple" style="width:0%"></div>
+              </div>
+              <span style="font-size:var(--text-xs);color:var(--color-text-muted);font-weight:var(--font-semibold);">0%</span>
+              <span class="btn btn--coming-soon btn--sm">Planned</span>
+            </div>
           </article>
 
-          <article class="roadmap-card fade-in">
-            <span class="roadmap-card__number">04</span>
-            <div class="roadmap-card__icon">🗄️</div>
-            <h3 class="roadmap-card__title">Storage</h3>
-            <p class="roadmap-card__desc">S3 storage classes, versioning, lifecycle policies, replication. EBS volume types, snapshots, encryption. EFS and FSx. Storage Gateway.</p>
-            <span class="roadmap-card__tag roadmap-card__tag--locked">Upcoming</span>
-          </article>
-
-          <article class="roadmap-card fade-in">
-            <span class="roadmap-card__number">05</span>
-            <div class="roadmap-card__icon">🌐</div>
-            <h3 class="roadmap-card__title">Networking</h3>
-            <p class="roadmap-card__desc">VPC design, subnets, CIDR blocks. Route tables, IGW, NAT Gateway. Security groups vs NACLs. VPC peering, Transit Gateway. VPN and Direct Connect. Route 53.</p>
-            <span class="roadmap-card__tag roadmap-card__tag--locked">Upcoming</span>
-          </article>
-
-          <article class="roadmap-card fade-in">
-            <span class="roadmap-card__number">06</span>
-            <div class="roadmap-card__icon">🗃️</div>
-            <h3 class="roadmap-card__title">Databases</h3>
-            <p class="roadmap-card__desc">RDS engines, Multi-AZ, Read Replicas. Aurora global databases. DynamoDB tables, GSIs, LSIs. ElastiCache (Redis vs Memcached). Neptune, Redshift.</p>
-            <span class="roadmap-card__tag roadmap-card__tag--locked">Upcoming</span>
-          </article>
-
-          <article class="roadmap-card fade-in">
-            <span class="roadmap-card__number">07</span>
-            <div class="roadmap-card__icon">⚡</div>
-            <h3 class="roadmap-card__title">Serverless</h3>
-            <p class="roadmap-card__desc">Lambda triggers, layers, concurrency, cold starts. API Gateway types. Step Functions. EventBridge rules. SAM and serverless architecture patterns.</p>
-            <span class="roadmap-card__tag roadmap-card__tag--locked">Upcoming</span>
-          </article>
-
-          <article class="roadmap-card fade-in">
-            <span class="roadmap-card__number">08</span>
-            <div class="roadmap-card__icon">🔗</div>
-            <h3 class="roadmap-card__title">Integration &amp; Messaging</h3>
-            <p class="roadmap-card__desc">SQS (standard vs FIFO), SNS fan-out, Kinesis Data Streams vs Firehose. EventBridge. SWF. App integration patterns and decoupling strategies.</p>
-            <span class="roadmap-card__tag roadmap-card__tag--locked">Upcoming</span>
-          </article>
-
-          <article class="roadmap-card fade-in">
-            <span class="roadmap-card__number">09</span>
-            <div class="roadmap-card__icon">📊</div>
-            <h3 class="roadmap-card__title">Monitoring &amp; Governance</h3>
-            <p class="roadmap-card__desc">CloudWatch metrics, alarms, Logs Insights. CloudTrail events. AWS Config rules. Trusted Advisor. Service quotas. Cost Explorer and Budgets.</p>
-            <span class="roadmap-card__tag roadmap-card__tag--locked">Upcoming</span>
-          </article>
-
-          <article class="roadmap-card fade-in">
-            <span class="roadmap-card__number">10</span>
-            <div class="roadmap-card__icon">🚚</div>
-            <h3 class="roadmap-card__title">Migration &amp; Transfer</h3>
-            <p class="roadmap-card__desc">AWS Migration Hub. Database Migration Service. Snowball Edge, Snowcone, Snowmobile. Server Migration Service. DataSync. Cloud adoption frameworks.</p>
-            <span class="roadmap-card__tag roadmap-card__tag--locked">Upcoming</span>
-          </article>
-
-          <article class="roadmap-card fade-in">
-            <span class="roadmap-card__number">11</span>
-            <div class="roadmap-card__icon">🏗️</div>
-            <h3 class="roadmap-card__title">Architecture Patterns</h3>
-            <p class="roadmap-card__desc">Well-Architected Framework (6 pillars). High availability and fault tolerance. Disaster recovery tiers (RTO/RPO). Scalability patterns. Multi-region design.</p>
-            <span class="roadmap-card__tag roadmap-card__tag--locked">Upcoming</span>
-          </article>
-
-          <article class="roadmap-card fade-in">
-            <span class="roadmap-card__number">12</span>
-            <div class="roadmap-card__icon">🎓</div>
-            <h3 class="roadmap-card__title">Exam Preparation</h3>
-            <p class="roadmap-card__desc">Domain breakdown and weightings. Practice question strategies. Time management. Last-minute cheat sheets. Common exam traps and how to avoid them.</p>
-            <span class="roadmap-card__tag roadmap-card__tag--locked">Final Stage</span>
-          </article>
-
-        </div><!-- /.roadmap__grid -->
-
+        </div>
       </div>
     </section>
 
-    <!-- Planned section -->
-    <section class="section section--alt" aria-labelledby="planned-title">
+    <!-- Comparison & Info Section -->
+    <section class="section section--alt" aria-labelledby="compare-title">
       <div class="container">
         <div class="section-header section-header--centered fade-in">
-          <div class="section-label">Coming Soon</div>
-          <h2 class="section-title" id="planned-title">What's planned for this page</h2>
-          <p class="section-subtitle">This page will grow into a fully interactive roadmap with progress tracking.</p>
+          <p class="section-label">Platform Features</p>
+          <h2 class="section-title" id="compare-title">What Each Roadmap Includes</h2>
         </div>
-        <div class="planned-list">
-          <div class="planned-item fade-in">
-            <span class="planned-item__icon">🗓️</span>
-            <div>
-              <div class="planned-item__title">Study Schedule Generator</div>
-              <div class="planned-item__desc">Create a personalized study schedule based on your target exam date.</div>
-            </div>
+
+        <div class="features-grid stagger">
+          <div class="feature-card fade-in">
+            <div class="feature-card__icon icon-bg--orange">📋</div>
+            <div class="feature-card__title">Progressive Tracks</div>
+            <p class="feature-card__desc">12-14 sequential learning tracks organized by exam domains and difficulty level.</p>
           </div>
-          <div class="planned-item fade-in">
-            <span class="planned-item__icon">✅</span>
-            <div>
-              <div class="planned-item__title">Progress Tracking</div>
-              <div class="planned-item__desc">Mark topics complete and track your overall SAA-C03 readiness percentage.</div>
-            </div>
+          <div class="feature-card fade-in">
+            <div class="feature-card__icon icon-bg--blue">📖</div>
+            <div class="feature-card__title">Deep-Dive Service Pages</div>
+            <p class="feature-card__desc">Comprehensive documentation for each service, tool, or concept with examples and best practices.</p>
           </div>
-          <div class="planned-item fade-in">
-            <span class="planned-item__icon">🔗</span>
-            <div>
-              <div class="planned-item__title">Track Deep Dives</div>
-              <div class="planned-item__desc">Each card links to a dedicated track page with all resources for that domain.</div>
-            </div>
+          <div class="feature-card fade-in">
+            <div class="feature-card__icon icon-bg--purple">🎯</div>
+            <div class="feature-card__title">Exam Strategy Guides</div>
+            <p class="feature-card__desc">Domain breakdowns, exam patterns, common traps, and time management strategies.</p>
           </div>
-          <div class="planned-item fade-in">
-            <span class="planned-item__icon">📅</span>
-            <div>
-              <div class="planned-item__title">Exam Domain Alignment</div>
-              <div class="planned-item__desc">Each track is mapped to its SAA-C03 exam domain and percentage weighting.</div>
-            </div>
+          <div class="feature-card fade-in">
+            <div class="feature-card__icon icon-bg--green">🔗</div>
+            <div class="feature-card__title">Interconnected Content</div>
+            <p class="feature-card__desc">Cross-references between services show how they work together in real-world architectures.</p>
           </div>
-          <div class="planned-item fade-in">
-            <span class="planned-item__icon">🔔</span>
-            <div>
-              <div class="planned-item__title">New Content Alerts</div>
-              <div class="planned-item__desc">Get notified when new study materials are added to a track.</div>
-            </div>
+          <div class="feature-card fade-in">
+            <div class="feature-card__icon icon-bg--teal">🎨</div>
+            <div class="feature-card__title">Architecture Diagrams</div>
+            <p class="feature-card__desc">Visual representations of common patterns, multi-tier systems, and disaster recovery designs.</p>
           </div>
-          <div class="planned-item fade-in">
-            <span class="planned-item__icon">📊</span>
-            <div>
-              <div class="planned-item__title">Visual Timeline</div>
-              <div class="planned-item__desc">An interactive Gantt-style view of your entire certification journey.</div>
-            </div>
+          <div class="feature-card fade-in">
+            <div class="feature-card__icon icon-bg--amber">⚡</div>
+            <div class="feature-card__title">Always Free & Open</div>
+            <p class="feature-card__desc">No login, no paywall, no dependencies. Open any page in a browser and start learning.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--dark" aria-labelledby="cta-heading">
+      <div class="container" style="text-align:center;max-width:640px;">
+        <h2 class="section-title" id="cta-heading" style="color:var(--color-text-inverse);">Ready to Start Learning?</h2>
+        <p style="color:rgba(255,255,255,0.6);line-height:var(--leading-relaxed);margin-bottom:var(--space-8);">
+          Begin with AWS SAA-C03, or come back when CKA and AWS ML tracks launch.
+        </p>
+        <div style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;">
+          <a href="roadmaps/saa-c03.html" class="btn btn--primary btn--lg">Start SAA-C03 Roadmap →</a>
+          <a href="index.html" class="btn btn--ghost-light btn--lg">Back to Home</a>
         </div>
       </div>
     </section>
@@ -262,37 +250,38 @@
       <div class="container">
         <div class="footer__grid">
           <div class="footer__brand">
-            <a href="index.html" class="footer__brand-logo" aria-label="AWS Learning Portal home">
-              <div class="footer__brand-icon" aria-hidden="true">AWS</div>
-              <span class="footer__brand-name">AWS Learning Portal</span>
+            <a href="index.html" class="footer__brand-logo" aria-label="Cloud Learning Portal home">
+              <div class="footer__brand-icon" aria-hidden="true">CLP</div>
+              <span class="footer__brand-name">Cloud Learning Portal</span>
             </a>
-            <p class="footer__brand-desc">A community-driven learning portal for AWS certification preparation and cloud best practices.</p>
+            <p class="footer__brand-desc">
+              A multi-certification study platform covering AWS, Kubernetes, ML and more.
+              Built for learners, by a learner. Free forever.
+            </p>
           </div>
           <div class="footer__col">
-            <h3 class="footer__col-title">AWS Services</h3>
+            <h3 class="footer__col-title">Certifications</h3>
             <ul class="footer__links">
-              <li><a href="services/iam.html" class="footer__link">IAM</a></li>
-              <li><a href="services/ec2.html" class="footer__link">EC2</a></li>
-              <li><a href="services/s3.html"  class="footer__link">S3</a></li>
-              <li><a href="services/vpc.html" class="footer__link">VPC</a></li>
-              <li><a href="services.html"     class="footer__link">All Services →</a></li>
+              <li><a href="roadmaps/saa-c03.html" class="footer__link">☁️ AWS SAA-C03 <span class="badge badge--orange">Active</span></a></li>
+              <li><a href="roadmap.html" class="footer__link">⎈ CKA <span class="badge badge--gray">Soon</span></a></li>
+              <li><a href="roadmap.html" class="footer__link">🤖 AWS ML Specialty <span class="badge badge--gray">Planned</span></a></li>
             </ul>
           </div>
           <div class="footer__col">
             <h3 class="footer__col-title">Quick Links</h3>
             <ul class="footer__links">
-              <li><a href="roadmap.html"      class="footer__link">Learning Roadmap</a></li>
-              <li><a href="materials.html"    class="footer__link">Study Materials</a></li>
-              <li><a href="exam-guide.html"   class="footer__link">Exam Guide</a></li>
-              <li><a href="about.html"        class="footer__link">About</a></li>
+              <li><a href="index.html" class="footer__link">Home</a></li>
+              <li><a href="services.html" class="footer__link">Services</a></li>
+              <li><a href="materials.html" class="footer__link">Materials</a></li>
+              <li><a href="about.html" class="footer__link">About</a></li>
             </ul>
           </div>
           <div class="footer__col">
-            <h3 class="footer__col-title">Official AWS</h3>
+            <h3 class="footer__col-title">Official Resources</h3>
             <ul class="footer__links">
-              <li><a href="https://docs.aws.amazon.com" target="_blank" rel="noopener noreferrer" class="footer__link footer__link-ext">AWS Documentation</a></li>
-              <li><a href="https://skillbuilder.aws"    target="_blank" rel="noopener noreferrer" class="footer__link footer__link-ext">AWS Skill Builder</a></li>
-              <li><a href="https://aws.amazon.com/whitepapers/" target="_blank" rel="noopener noreferrer" class="footer__link footer__link-ext">AWS Whitepapers</a></li>
+              <li><a href="https://docs.aws.amazon.com" target="_blank" rel="noopener" class="footer__link footer__link-ext">AWS Docs</a></li>
+              <li><a href="https://kubernetes.io/docs" target="_blank" rel="noopener" class="footer__link footer__link-ext">K8s Docs</a></li>
+              <li><a href="https://aws.amazon.com/training/" target="_blank" rel="noopener" class="footer__link footer__link-ext">AWS Training</a></li>
             </ul>
           </div>
         </div>
@@ -301,18 +290,14 @@
     <div class="footer__bottom">
       <div class="container">
         <div class="footer__bottom-inner">
-          <p class="footer__copy">&copy; <span id="footer-year"></span> AWS Learning Portal. Built for learners, by a learner.</p>
-          <nav class="footer__legal" aria-label="Legal links">
-            <a href="about.html"   class="footer__legal-link">About</a>
-            <a href="contact.html" class="footer__legal-link">Contact</a>
-          </nav>
+          <p class="footer__copy">&copy; <span id="footer-year"></span> Cloud Learning Portal. Free &amp; Open Source.</p>
         </div>
-        <p class="footer__disclaimer">This is an independent learning resource, not affiliated with Amazon Web Services. AWS marks are trademarks of Amazon.com, Inc.</p>
+        <p class="footer__disclaimer">This is an independent learning resource covering AWS, Kubernetes, and other platforms. Not affiliated with Amazon Web Services, Linux Foundation, or others.</p>
       </div>
     </div>
   </footer>
 
-  <script src="js/app.js"></script>
+  <script src="shared/js/app.js"></script>
   <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
