@@ -1919,3 +1919,104 @@ code {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   16. Multi-Cert / CKA Track Styles
+   ============================================================ */
+
+/* Cert-track nav breadcrumb bar (sits just below main navbar) */
+.cert-track-bar {
+  background: rgba(35,47,62,0.97);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: var(--space-2) 0;
+}
+
+.cert-track-bar__inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.cert-track-bar__trail {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,0.45);
+}
+
+.cert-track-bar__trail a {
+  color: rgba(255,255,255,0.45);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.cert-track-bar__trail a:hover { color: var(--color-aws-orange); }
+
+.cert-track-bar__trail-sep { opacity: 0.3; }
+
+.cert-track-bar__trail-current {
+  color: rgba(255,255,255,0.75);
+  font-weight: var(--font-medium);
+}
+
+.cert-track-bar__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.cert-track-bar__link {
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-xs);
+  font-weight: var(--font-medium);
+  color: rgba(255,255,255,0.55);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: color var(--transition-fast), background var(--transition-fast);
+  white-space: nowrap;
+}
+
+.cert-track-bar__link:hover {
+  color: var(--color-text-inverse);
+  background: rgba(255,255,255,0.07);
+}
+
+.cert-track-bar__link.active {
+  color: var(--color-aws-orange);
+  background: rgba(255,153,0,0.1);
+}
+
+/* k8s / CKA category colors */
+.k8s-cat--cluster     { border-left: 3px solid #326CE5; }
+.k8s-cat--workloads   { border-left: 3px solid #FF9900; }
+.k8s-cat--services    { border-left: 3px solid #00BCD4; }
+.k8s-cat--storage     { border-left: 3px solid #1D8348; }
+.k8s-cat--security    { border-left: 3px solid #C0392B; }
+.k8s-cat--networking  { border-left: 3px solid #6B46C1; }
+.k8s-cat--observability { border-left: 3px solid #F39C12; }
+
+/* CKA-specific badge accent */
+.badge--k8s {
+  background: rgba(50,108,229,0.1);
+  color: #326CE5;
+  border: 1px solid rgba(50,108,229,0.2);
+}
+
+/* Roadmap card — active variant for CKA (blue accent) */
+.roadmap-card:hover.cka-track {
+  border-color: #326CE5;
+}
+
+.roadmap-card__tag--cka-active {
+  background: rgba(50,108,229,0.1);
+  color: #326CE5;
+  border: 1px solid rgba(50,108,229,0.2);
+}
+
+/* Footer: cert-specific columns on track pages */
+.footer__col-title--k8s { color: #326CE5; }

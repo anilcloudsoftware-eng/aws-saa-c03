@@ -3,45 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AWS SAA-C03 Learning Roadmap — A structured path from cloud fundamentals through exam preparation." />
-  <title>Learning Roadmap — AWS Learning Portal</title>
+  <meta name="description" content="AWS SAA-C03 Learning Roadmap — a structured path from cloud fundamentals through exam preparation." />
+  <title>SAA-C03 Roadmap — Cloud Learning Portal</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="shared/css/style.css" />
+  <link rel="stylesheet" href="shared/css/responsive.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23232F3E'/><text y='.9em' font-size='70' x='12'>☁️</text></svg>" />
 </head>
 <body>
 
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <div class="announcement-bar">
-    <strong>📚 Currently studying:</strong> AWS Certified Solutions Architect – Associate (SAA-C03) &nbsp;·&nbsp;
-    <a href="services/iam.html">Start with IAM →</a>
-  </div>
-
+  <!-- ── Main Portal Navbar ── -->
   <header class="navbar" role="banner">
     <div class="navbar__inner">
-      <a href="index.html" class="navbar__logo" aria-label="AWS Learning Portal home">
-        <div class="navbar__logo-icon" aria-hidden="true">AWS</div>
+      <a href="index.html" class="navbar__logo" aria-label="Cloud Learning Portal home">
+        <div class="navbar__logo-icon" aria-hidden="true">CLP</div>
         <div class="navbar__logo-text">
-          <span class="navbar__logo-name">AWS Learning Portal</span>
-          <span class="navbar__logo-tagline">SAA-C03 Study Hub</span>
+          <span class="navbar__logo-name">Cloud Learning Portal</span>
+          <span class="navbar__logo-tagline">Multi-Certification Study Hub</span>
         </div>
       </a>
       <nav class="navbar__nav" role="navigation" aria-label="Main navigation">
-        <a href="index.html"        class="navbar__link">Home</a>
-        <a href="roadmap.html"      class="navbar__link active">Roadmap</a>
-        <a href="services.html"     class="navbar__link">AWS Services</a>
-        <a href="materials.html"    class="navbar__link">Learning Materials</a>
-        <a href="architecture.html" class="navbar__link">Architecture</a>
-        <a href="exam-guide.html"   class="navbar__link">Exam Guide</a>
-        <a href="about.html"        class="navbar__link">About</a>
-        <a href="contact.html"      class="navbar__link">Contact</a>
+        <a href="index.html"            class="navbar__link">Home</a>
+        <a href="index.html#certifications" class="navbar__link">Certifications</a>
+        <a href="about.html"            class="navbar__link">About</a>
+        <a href="contact.html"          class="navbar__link">Contact</a>
       </nav>
       <div class="navbar__actions">
-        <span class="navbar__badge">SAA-C03 In Progress</span>
+        <span class="navbar__badge">SAA-C03 Active</span>
         <button class="navbar__hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
           <span></span><span></span><span></span>
         </button>
@@ -49,15 +41,36 @@
     </div>
   </header>
 
+  <!-- Mobile Menu -->
   <div class="navbar__mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
-    <a href="index.html"        class="navbar__mobile-link">🏠 Home</a>
-    <a href="roadmap.html"      class="navbar__mobile-link">🗺️ Roadmap</a>
-    <a href="services.html"     class="navbar__mobile-link">⚙️ AWS Services</a>
-    <a href="materials.html"    class="navbar__mobile-link">📚 Learning Materials</a>
-    <a href="architecture.html" class="navbar__mobile-link">🏗️ Architecture Patterns</a>
-    <a href="exam-guide.html"   class="navbar__mobile-link">📝 Exam Guide</a>
-    <a href="about.html"        class="navbar__mobile-link">ℹ️ About</a>
-    <a href="contact.html"      class="navbar__mobile-link">✉️ Contact</a>
+    <a href="index.html"                class="navbar__mobile-link">🏠 Portal Home</a>
+    <a href="index.html#certifications" class="navbar__mobile-link">🎓 Certifications</a>
+    <a href="roadmap.html"              class="navbar__mobile-link">🗺️ SAA-C03 Roadmap</a>
+    <a href="services.html"             class="navbar__mobile-link">⚙️ AWS Services</a>
+    <a href="materials.html"            class="navbar__mobile-link">📚 Learning Materials</a>
+    <a href="architecture.html"         class="navbar__mobile-link">🏗️ Architecture</a>
+    <a href="exam-guide.html"           class="navbar__mobile-link">📝 Exam Guide</a>
+    <a href="cka/roadmap.html"          class="navbar__mobile-link">⎈ CKA — Coming Soon</a>
+    <a href="about.html"                class="navbar__mobile-link">ℹ️ About</a>
+    <a href="contact.html"              class="navbar__mobile-link">✉️ Contact</a>
+  </div>
+
+  <!-- ── SAA-C03 Track Sub-nav ── -->
+  <div class="cert-track-bar" role="navigation" aria-label="SAA-C03 track navigation">
+    <div class="cert-track-bar__inner">
+      <div class="cert-track-bar__trail">
+        <a href="index.html">Portal</a>
+        <span class="cert-track-bar__trail-sep" aria-hidden="true">›</span>
+        <span class="cert-track-bar__trail-current">☁️ AWS SAA-C03</span>
+      </div>
+      <div class="cert-track-bar__links">
+        <a href="roadmap.html"      class="cert-track-bar__link active">Roadmap</a>
+        <a href="services.html"     class="cert-track-bar__link">Services</a>
+        <a href="architecture.html" class="cert-track-bar__link">Architecture</a>
+        <a href="exam-guide.html"   class="cert-track-bar__link">Exam Guide</a>
+        <a href="materials.html"    class="cert-track-bar__link">Materials</a>
+      </div>
+    </div>
   </div>
 
   <main id="main-content">
@@ -66,7 +79,9 @@
     <div class="page-hero">
       <div class="container page-hero__inner">
         <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
-          <a href="index.html">Home</a>
+          <a href="index.html">Portal</a>
+          <span class="page-hero__breadcrumb-sep" aria-hidden="true">›</span>
+          <a href="index.html#certifications">SAA-C03</a>
           <span class="page-hero__breadcrumb-sep" aria-hidden="true">›</span>
           <span class="page-hero__breadcrumb-current">Roadmap</span>
         </nav>
@@ -200,7 +215,7 @@
       </div>
     </section>
 
-    <!-- Planned section -->
+    <!-- Planned features section -->
     <section class="section section--alt" aria-labelledby="planned-title">
       <div class="container">
         <div class="section-header section-header--centered fade-in">
@@ -262,57 +277,62 @@
       <div class="container">
         <div class="footer__grid">
           <div class="footer__brand">
-            <a href="index.html" class="footer__brand-logo" aria-label="AWS Learning Portal home">
-              <div class="footer__brand-icon" aria-hidden="true">AWS</div>
-              <span class="footer__brand-name">AWS Learning Portal</span>
+            <a href="index.html" class="footer__brand-logo" aria-label="Cloud Learning Portal home">
+              <div class="footer__brand-icon" aria-hidden="true">CLP</div>
+              <span class="footer__brand-name">Cloud Learning Portal</span>
             </a>
-            <p class="footer__brand-desc">A community-driven learning portal for AWS certification preparation and cloud best practices.</p>
+            <p class="footer__brand-desc">A self-hosted, multi-certification study platform covering AWS, Kubernetes, ML and more. Free forever.</p>
+            <div class="footer__social">
+              <a href="#" class="footer__social-link" aria-label="GitHub">🐙</a>
+              <a href="#" class="footer__social-link" aria-label="Twitter / X">🐦</a>
+              <a href="#" class="footer__social-link" aria-label="LinkedIn">💼</a>
+            </div>
           </div>
-          <div class="footer__col">
-            <h3 class="footer__col-title">AWS Services</h3>
+          <div>
+            <div class="footer__col-title">SAA-C03 Track</div>
             <ul class="footer__links">
-              <li><a href="services/iam.html" class="footer__link">IAM</a></li>
-              <li><a href="services/ec2.html" class="footer__link">EC2</a></li>
-              <li><a href="services/s3.html"  class="footer__link">S3</a></li>
-              <li><a href="services/vpc.html" class="footer__link">VPC</a></li>
-              <li><a href="services.html"     class="footer__link">All Services →</a></li>
+              <li><a href="roadmap.html"      class="footer__link">🗺️ Roadmap</a></li>
+              <li><a href="services.html"     class="footer__link">⚙️ AWS Services</a></li>
+              <li><a href="architecture.html" class="footer__link">🏗️ Architecture</a></li>
+              <li><a href="exam-guide.html"   class="footer__link">📝 Exam Guide</a></li>
+              <li><a href="materials.html"    class="footer__link">📚 Materials</a></li>
             </ul>
           </div>
-          <div class="footer__col">
-            <h3 class="footer__col-title">Quick Links</h3>
+          <div>
+            <div class="footer__col-title">Other Certs</div>
             <ul class="footer__links">
-              <li><a href="roadmap.html"      class="footer__link">Learning Roadmap</a></li>
-              <li><a href="materials.html"    class="footer__link">Study Materials</a></li>
-              <li><a href="exam-guide.html"   class="footer__link">Exam Guide</a></li>
-              <li><a href="about.html"        class="footer__link">About</a></li>
+              <li><a href="cka/roadmap.html"      class="footer__link">⎈ CKA <span class="badge badge--blue" style="margin-left:4px;">Soon</span></a></li>
+              <li><a href="index.html#certifications" class="footer__link">🤖 AWS ML Specialty <span class="badge badge--gray" style="margin-left:4px;">Planned</span></a></li>
+              <li><a href="index.html#certifications" class="footer__link">🔐 AWS DevOps Pro <span class="badge badge--gray" style="margin-left:4px;">Planned</span></a></li>
             </ul>
           </div>
-          <div class="footer__col">
-            <h3 class="footer__col-title">Official AWS</h3>
+          <div>
+            <div class="footer__col-title">Official Resources</div>
             <ul class="footer__links">
-              <li><a href="https://docs.aws.amazon.com" target="_blank" rel="noopener noreferrer" class="footer__link footer__link-ext">AWS Documentation</a></li>
-              <li><a href="https://skillbuilder.aws"    target="_blank" rel="noopener noreferrer" class="footer__link footer__link-ext">AWS Skill Builder</a></li>
-              <li><a href="https://aws.amazon.com/whitepapers/" target="_blank" rel="noopener noreferrer" class="footer__link footer__link-ext">AWS Whitepapers</a></li>
+              <li><a href="https://docs.aws.amazon.com" class="footer__link footer__link-ext" target="_blank" rel="noopener">AWS Documentation</a></li>
+              <li><a href="https://skillbuilder.aws"    class="footer__link footer__link-ext" target="_blank" rel="noopener">AWS Skill Builder</a></li>
+              <li><a href="https://aws.amazon.com/whitepapers/" class="footer__link footer__link-ext" target="_blank" rel="noopener">AWS Whitepapers</a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-    <div class="footer__bottom">
-      <div class="container">
+    <div class="container">
+      <p class="footer__disclaimer">
+        Independent learning resource. Not affiliated with Amazon Web Services or any certification body. All trademarks belong to their respective owners.
+      </p>
+      <div class="footer__bottom">
         <div class="footer__bottom-inner">
-          <p class="footer__copy">&copy; <span id="footer-year"></span> AWS Learning Portal. Built for learners, by a learner.</p>
+          <p class="footer__copy">© <span id="footer-year"></span> Cloud Learning Portal — Free &amp; Open Source</p>
           <nav class="footer__legal" aria-label="Legal links">
             <a href="about.html"   class="footer__legal-link">About</a>
             <a href="contact.html" class="footer__legal-link">Contact</a>
           </nav>
         </div>
-        <p class="footer__disclaimer">This is an independent learning resource, not affiliated with Amazon Web Services. AWS marks are trademarks of Amazon.com, Inc.</p>
       </div>
     </div>
   </footer>
 
-  <script src="js/app.js"></script>
-  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+  <script src="shared/js/app.js"></script>
 </body>
 </html>

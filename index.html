@@ -197,11 +197,11 @@
       <nav class="navbar__nav" role="navigation" aria-label="Main navigation">
         <a href="index.html"      class="navbar__link active">Home</a>
         <a href="#certifications" class="navbar__link">Certifications</a>
-        <a href="#features"       class="navbar__link">About</a>
-        <a href="#contact"        class="navbar__link">Contact</a>
+        <a href="about.html"      class="navbar__link">About</a>
+        <a href="contact.html"    class="navbar__link">Contact</a>
       </nav>
       <div class="navbar__actions">
-        <span class="navbar__badge">SAA-C03 Active</span>
+        <span class="navbar__badge">SAA-C03 In Progress</span>
         <button class="navbar__hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
           <span></span><span></span><span></span>
         </button>
@@ -213,11 +213,11 @@
   <div class="navbar__mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
     <a href="index.html"      class="navbar__mobile-link">🏠 Home</a>
     <a href="#certifications" class="navbar__mobile-link">🎓 Certifications</a>
-    <a href="services/iam.html"                          class="navbar__mobile-link">☁️ AWS SAA-C03</a>
-    <a href="#certifications"                            class="navbar__mobile-link">⎈ CKA — Coming Soon</a>
-    <a href="#certifications"                            class="navbar__mobile-link">🤖 AWS ML Specialty — Coming Soon</a>
-    <a href="#features"       class="navbar__mobile-link">ℹ️ About</a>
-    <a href="#contact"        class="navbar__mobile-link">✉️ Contact</a>
+    <a href="roadmap.html"    class="navbar__mobile-link">☁️ SAA-C03 Track</a>
+    <a href="#certifications" class="navbar__mobile-link">⎈ CKA — Coming Soon</a>
+    <a href="#certifications" class="navbar__mobile-link">🤖 AWS ML — Planned</a>
+    <a href="about.html"      class="navbar__mobile-link">ℹ️ About</a>
+    <a href="contact.html"    class="navbar__mobile-link">✉️ Contact</a>
   </div>
 
   <main id="main-content">
@@ -235,7 +235,7 @@
         <div class="platform-hero__left">
           <div class="platform-hero__eyebrow">
             <span class="platform-hero__eyebrow-dot" aria-hidden="true"></span>
-            Multi-Certification Study Hub
+            Cloud &amp; DevOps Certification Hub
           </div>
 
           <h1 class="platform-hero__title" id="hero-heading">
@@ -243,28 +243,28 @@
           </h1>
 
           <p class="platform-hero__subtitle">
-            One platform for every certification you're chasing — AWS Solutions Architect,
-            Kubernetes (CKA), AWS ML Specialty and more. Deep study notes, roadmaps,
-            architecture patterns and exam guides, always free.
+            One platform for every certification on your list. Deep study notes, structured
+            roadmaps, architecture breakdowns and exam guides — for AWS, Kubernetes, ML and
+            whatever comes next. Free, always.
           </p>
 
           <div class="platform-hero__actions">
-            <a href="services/iam.html" class="btn btn--primary btn--lg">Start Learning →</a>
-            <a href="#certifications"   class="btn btn--ghost-light btn--lg">View Certifications</a>
+            <a href="#certifications" class="btn btn--primary btn--lg">Explore Certifications →</a>
+            <a href="roadmap.html"    class="btn btn--ghost-light btn--lg">SAA-C03 Roadmap</a>
           </div>
 
           <div class="platform-stats stagger">
             <div class="platform-stat fade-in">
-              <div class="platform-stat__number">3+</div>
-              <div class="platform-stat__label">Certifications</div>
+              <div class="platform-stat__number">3</div>
+              <div class="platform-stat__label">Cert Tracks</div>
             </div>
             <div class="platform-stat fade-in">
-              <div class="platform-stat__number">17+</div>
-              <div class="platform-stat__label">AWS Services</div>
+              <div class="platform-stat__number">1</div>
+              <div class="platform-stat__label">Active Now</div>
             </div>
             <div class="platform-stat fade-in">
-              <div class="platform-stat__number">12</div>
-              <div class="platform-stat__label">Learning Tracks</div>
+              <div class="platform-stat__number">2</div>
+              <div class="platform-stat__label">Coming Soon</div>
             </div>
             <div class="platform-stat fade-in">
               <div class="platform-stat__number">Free</div>
@@ -276,10 +276,44 @@
         <!-- Right: visual panels -->
         <div class="platform-hero__right" style="display:flex;flex-direction:column;gap:var(--space-4);">
 
-          <!-- Active study progress panel -->
+          <!-- Certification path panel (primary) -->
           <div class="hero__panel fade-in">
             <div class="hero__panel-header">
-              <span class="hero__panel-title">📊 SAA-C03 Study Progress</span>
+              <span class="hero__panel-title">🎯 Certification Tracks</span>
+              <span class="hero__panel-badge hero__panel-badge--green">3 Tracks</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:var(--space-2);">
+              <div class="hero__cert-item">
+                <div class="hero__cert-icon hero__cert-icon--orange">☁️</div>
+                <div class="hero__cert-info">
+                  <div class="hero__cert-name">AWS Solutions Architect – Associate</div>
+                  <div class="hero__cert-meta">SAA-C03 · In Progress</div>
+                </div>
+                <span class="hero__cert-status hero__cert-status--active">Active</span>
+              </div>
+              <div class="hero__cert-item">
+                <div class="hero__cert-icon hero__cert-icon--blue">⎈</div>
+                <div class="hero__cert-info">
+                  <div class="hero__cert-name">Certified Kubernetes Administrator</div>
+                  <div class="hero__cert-meta">CKA · Coming Soon</div>
+                </div>
+                <span class="hero__cert-status hero__cert-status--locked">Soon</span>
+              </div>
+              <div class="hero__cert-item">
+                <div class="hero__cert-icon" style="background:rgba(107,70,193,0.15);">🤖</div>
+                <div class="hero__cert-info">
+                  <div class="hero__cert-name">AWS Machine Learning Specialty</div>
+                  <div class="hero__cert-meta">MLS-C01 · Planned</div>
+                </div>
+                <span class="hero__cert-status hero__cert-status--locked">Planned</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- SAA-C03 active study progress (secondary — shows what's live now) -->
+          <div class="hero__panel fade-in">
+            <div class="hero__panel-header">
+              <span class="hero__panel-title">📖 Currently Studying — SAA-C03</span>
               <span class="hero__panel-badge">In Progress</span>
             </div>
             <div class="hero__progress-list">
@@ -302,40 +336,6 @@
             </div>
           </div>
 
-          <!-- Certification path panel -->
-          <div class="hero__panel fade-in">
-            <div class="hero__panel-header">
-              <span class="hero__panel-title">🎯 Certification Path</span>
-              <span class="hero__panel-badge hero__panel-badge--green">Active</span>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:var(--space-1);">
-              <div class="hero__cert-item">
-                <div class="hero__cert-icon hero__cert-icon--orange">☁️</div>
-                <div class="hero__cert-info">
-                  <div class="hero__cert-name">AWS Solutions Architect – Associate</div>
-                  <div class="hero__cert-meta">SAA-C03 · In Progress</div>
-                </div>
-                <span class="hero__cert-status hero__cert-status--active">Active</span>
-              </div>
-              <div class="hero__cert-item">
-                <div class="hero__cert-icon hero__cert-icon--blue">⎈</div>
-                <div class="hero__cert-info">
-                  <div class="hero__cert-name">Certified Kubernetes Administrator</div>
-                  <div class="hero__cert-meta">CKA · Coming Soon</div>
-                </div>
-                <span class="hero__cert-status hero__cert-status--locked">Soon</span>
-              </div>
-              <div class="hero__cert-item">
-                <div class="hero__cert-icon" style="background:rgba(107,70,193,0.15);">🤖</div>
-                <div class="hero__cert-info">
-                  <div class="hero__cert-name">AWS ML Specialty</div>
-                  <div class="hero__cert-meta">MLS-C01 · Planned</div>
-                </div>
-                <span class="hero__cert-status hero__cert-status--locked">Planned</span>
-              </div>
-            </div>
-          </div>
-
         </div><!-- /right -->
       </div><!-- /inner -->
     </section><!-- /hero -->
@@ -346,11 +346,11 @@
     <section class="section section--alt" id="certifications" aria-labelledby="certs-heading">
       <div class="container">
         <div class="section-header section-header--centered fade-in">
-          <p class="section-label">What You Can Study</p>
+          <p class="section-label">Available Tracks</p>
           <h2 class="section-title" id="certs-heading">Certifications on This Platform</h2>
           <p class="section-subtitle">
-            Each certification gets its own dedicated track — roadmap, service deep-dives,
-            architecture patterns and exam strategy. New tracks are added as they're built.
+            Each certification gets its own dedicated track — roadmap, topic deep-dives,
+            architecture patterns and exam strategy. Tracks open as they're built.
           </p>
         </div>
 
@@ -464,12 +464,6 @@
 
         </div><!-- /cert-grid -->
 
-        <!-- "More coming" nudge -->
-        <p class="fade-in" style="text-align:center;margin-top:var(--space-10);font-size:var(--text-sm);color:var(--color-text-muted);">
-          More certifications planned — AWS DevOps Professional, AWS Security Specialty, Azure AZ-900 and others.
-          <a href="#contact" style="color:var(--color-aws-orange);font-weight:var(--font-semibold);">Suggest one →</a>
-        </p>
-
       </div>
     </section><!-- /certifications -->
 
@@ -482,7 +476,7 @@
           <p class="section-label">Why This Platform</p>
           <h2 class="section-title" id="features-heading">Built for Serious Learners</h2>
           <p class="section-subtitle">
-            Not just another notes dump. Every page is structured to build real understanding —
+            Not just a notes dump. Every page is structured to build real understanding —
             the kind that holds up in the exam room and on the job.
           </p>
         </div>
@@ -490,33 +484,33 @@
         <div class="features-grid stagger">
           <div class="feature-card fade-in">
             <div class="feature-card__icon icon-bg--orange">📚</div>
-            <div class="feature-card__title">Deep Service Notes</div>
-            <p class="feature-card__desc">Every AWS service gets a dedicated page — intro, core concepts, use cases, best practices and exam traps. Not bullet points: real explanations.</p>
+            <div class="feature-card__title">Deep Topic Notes</div>
+            <p class="feature-card__desc">Every service, concept and component gets its own page — intro, core mechanics, use cases, best practices and exam traps. Real explanations, not bullet points.</p>
           </div>
           <div class="feature-card fade-in">
             <div class="feature-card__icon icon-bg--blue">🗺️</div>
             <div class="feature-card__title">Structured Roadmaps</div>
-            <p class="feature-card__desc">Follow a 12-track learning roadmap built around the actual exam domains. Know exactly where you are and what to study next.</p>
+            <p class="feature-card__desc">Each cert track follows a progressive roadmap built around the actual exam domains. Know exactly where you are and what to study next.</p>
           </div>
           <div class="feature-card fade-in">
             <div class="feature-card__icon icon-bg--purple">🏗️</div>
             <div class="feature-card__title">Architecture Patterns</div>
-            <p class="feature-card__desc">Real-world AWS architecture diagrams — multi-tier, serverless, event-driven, disaster recovery and Well-Architected Framework walkthroughs.</p>
+            <p class="feature-card__desc">Reference architectures, design diagrams and real-world patterns for each certification — not just theory, but how systems are actually built.</p>
           </div>
           <div class="feature-card fade-in">
             <div class="feature-card__icon icon-bg--green">🎯</div>
             <div class="feature-card__title">Exam-Focused Strategy</div>
-            <p class="feature-card__desc">Each cert track includes an exam guide covering domain weights, question patterns, common traps and a study timeline that actually fits a busy schedule.</p>
+            <p class="feature-card__desc">Each track includes an exam guide covering domain weights, question patterns, common traps and a realistic study timeline.</p>
           </div>
           <div class="feature-card fade-in">
             <div class="feature-card__icon icon-bg--teal">🔄</div>
             <div class="feature-card__title">Always Growing</div>
-            <p class="feature-card__desc">New service pages, certifications and tracks are added continuously. This is a long-term knowledge base, not a one-time cram sheet.</p>
+            <p class="feature-card__desc">New topics, tracks and cert pages are added continuously as learning progresses. This is a long-term knowledge base, not a cram sheet.</p>
           </div>
           <div class="feature-card fade-in">
             <div class="feature-card__icon icon-bg--amber">⚡</div>
             <div class="feature-card__title">Zero Dependencies</div>
-            <p class="feature-card__desc">No login, no paywall, no build tools. Open any page in a browser and start learning. Works offline too — just open the HTML file.</p>
+            <p class="feature-card__desc">No login, no paywall, no build tools. Open any page in a browser and start reading. Works offline too — just open the HTML file.</p>
           </div>
         </div>
       </div>
@@ -529,15 +523,15 @@
       <div class="container" style="text-align:center;max-width:640px;">
         <p class="section-label" style="justify-content:center;color:var(--color-aws-orange);">Get Involved</p>
         <h2 class="section-title" id="contact-heading" style="color:var(--color-text-inverse);margin-bottom:var(--space-4);">
-          Found an error? Want a new cert added?
+          Found an error? Have a suggestion?
         </h2>
         <p style="color:rgba(255,255,255,0.6);line-height:var(--leading-relaxed);margin-bottom:var(--space-8);">
-          This platform grows through feedback. Spotted a mistake in the notes, want a service page prioritised,
-          or think a new certification should be added? Use the feedback form or open an issue on GitHub.
+          This platform grows through use and feedback. Spotted a mistake, want a topic covered
+          sooner, or just want to say hello? All feedback is welcome.
         </p>
         <div style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;">
-          <a href="services/iam.html" class="btn btn--primary btn--lg">Start with SAA-C03 →</a>
-          <a href="mailto:feedback@example.com" class="btn btn--ghost-light btn--lg">Send Feedback</a>
+          <a href="roadmap.html"            class="btn btn--primary btn--lg">Start with SAA-C03 →</a>
+          <a href="contact.html"            class="btn btn--ghost-light btn--lg">Send Feedback</a>
         </div>
       </div>
     </section><!-- /contact -->
@@ -573,21 +567,20 @@
           <div>
             <div class="footer__col-title">Certifications</div>
             <ul class="footer__links">
-              <li><a href="services/iam.html"  class="footer__link">☁️ AWS SAA-C03 <span class="badge badge--orange" style="margin-left:4px;">Active</span></a></li>
-              <li><a href="#certifications"     class="footer__link">⎈ CKA <span class="badge badge--blue" style="margin-left:4px;">Soon</span></a></li>
-              <li><a href="#certifications"     class="footer__link">🤖 AWS ML Specialty <span class="badge badge--gray" style="margin-left:4px;">Planned</span></a></li>
-              <li><a href="#certifications"     class="footer__link">🔐 AWS DevOps Pro <span class="badge badge--gray" style="margin-left:4px;">Planned</span></a></li>
+              <li><a href="roadmap.html"      class="footer__link">☁️ AWS SAA-C03 <span class="badge badge--orange" style="margin-left:4px;">Active</span></a></li>
+              <li><a href="#certifications"   class="footer__link">⎈ CKA <span class="badge badge--blue" style="margin-left:4px;">Soon</span></a></li>
+              <li><a href="#certifications"   class="footer__link">🤖 AWS ML Specialty <span class="badge badge--gray" style="margin-left:4px;">Planned</span></a></li>
             </ul>
           </div>
 
-          <!-- SAA-C03 Resources -->
+          <!-- SAA-C03 Quick Links -->
           <div>
             <div class="footer__col-title">SAA-C03 Resources</div>
             <ul class="footer__links">
-              <li><a href="services/iam.html"  class="footer__link">IAM Deep Dive</a></li>
-              <li><a href="services/ec2.html"  class="footer__link">EC2 Notes</a></li>
-              <li><a href="services/s3.html"   class="footer__link">S3 Notes</a></li>
-              <li><a href="services/vpc.html"  class="footer__link">VPC Notes</a></li>
+              <li><a href="roadmap.html"      class="footer__link">Learning Roadmap</a></li>
+              <li><a href="services.html"     class="footer__link">AWS Services</a></li>
+              <li><a href="exam-guide.html"   class="footer__link">Exam Guide</a></li>
+              <li><a href="services/iam.html" class="footer__link">IAM Deep Dive</a></li>
             </ul>
           </div>
 
