@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Cloud Learning Portal — study notes, roadmaps and exam guides for AWS, Kubernetes, ML and other cloud certifications." />
-  <title>Cloud Learning Portal — AWS · CKA · ML Certifications</title>
+  <meta name="description" content="DevOps & Cloud Certifications Hub — in-depth study notes, roadmaps and exam guides for AWS SAA-C03, Kubernetes CKA and AWS ML Specialty." />
+  <title>DevOps &amp; Cloud Certifications Hub — AWS · CKA · ML</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -14,7 +14,7 @@
   <style>
     /* ── Platform Hero ── */
     .platform-hero {
-      background: var(--color-aws-dark);
+      background: linear-gradient(135deg, #1a2233 0%, #1e2d40 35%, #1a2233 60%, #1c1f2e 100%);
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -25,21 +25,30 @@
     .platform-hero__bg-grid {
       position: absolute; inset: 0;
       background-image:
-        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
       background-size: 60px 60px;
       pointer-events: none;
     }
+    /* Orange glow — AWS side (right) */
     .platform-hero__glow {
-      position: absolute; top: -20%; right: -5%;
-      width: 700px; height: 700px;
-      background: radial-gradient(circle, rgba(255,153,0,0.1) 0%, transparent 65%);
+      position: absolute; top: -15%; right: -5%;
+      width: 750px; height: 750px;
+      background: radial-gradient(circle, rgba(255,153,0,0.18) 0%, rgba(255,153,0,0.06) 40%, transparent 70%);
       border-radius: 50%; pointer-events: none;
     }
+    /* Blue glow — CKA/DevOps side (left) */
     .platform-hero__glow-2 {
-      position: absolute; bottom: -20%; left: -5%;
+      position: absolute; bottom: -15%; left: -5%;
+      width: 650px; height: 650px;
+      background: radial-gradient(circle, rgba(50,108,229,0.16) 0%, rgba(0,115,187,0.07) 40%, transparent 70%);
+      border-radius: 50%; pointer-events: none;
+    }
+    /* Subtle centre blend so the two colours meet */
+    .platform-hero__glow-3 {
+      position: absolute; top: 20%; left: 35%;
       width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(0,115,187,0.08) 0%, transparent 65%);
+      background: radial-gradient(circle, rgba(255,153,0,0.04) 0%, rgba(50,108,229,0.04) 60%, transparent 80%);
       border-radius: 50%; pointer-events: none;
     }
     .platform-hero__inner {
@@ -187,11 +196,11 @@
   <!-- Navbar -->
   <header class="navbar" role="banner">
     <div class="navbar__inner">
-      <a href="index.html" class="navbar__logo" aria-label="Cloud Learning Portal home">
-        <div class="navbar__logo-icon" aria-hidden="true">CLP</div>
+      <a href="index.html" class="navbar__logo" aria-label="DevOps & Cloud Certifications Hub home">
+        <div class="navbar__logo-icon" aria-hidden="true">DCH</div>
         <div class="navbar__logo-text">
-          <span class="navbar__logo-name">Cloud Learning Portal</span>
-          <span class="navbar__logo-tagline">Multi-Certification Study Hub</span>
+          <span class="navbar__logo-name">DevOps &amp; Cloud Certifications</span>
+          <span class="navbar__logo-tagline">AWS · Kubernetes · ML</span>
         </div>
       </a>
       <nav class="navbar__nav" role="navigation" aria-label="Main navigation">
@@ -201,7 +210,6 @@
         <a href="contact.html"    class="navbar__link">Contact</a>
       </nav>
       <div class="navbar__actions">
-        <span class="navbar__badge">SAA-C03 In Progress</span>
         <button class="navbar__hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
           <span></span><span></span><span></span>
         </button>
@@ -213,9 +221,9 @@
   <div class="navbar__mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
     <a href="index.html"      class="navbar__mobile-link">🏠 Home</a>
     <a href="#certifications" class="navbar__mobile-link">🎓 Certifications</a>
-    <a href="roadmap.html"    class="navbar__mobile-link">☁️ SAA-C03 Track</a>
-    <a href="#certifications" class="navbar__mobile-link">⎈ CKA — Coming Soon</a>
-    <a href="#certifications" class="navbar__mobile-link">🤖 AWS ML — Planned</a>
+    <a href="roadmap.html"    class="navbar__mobile-link">☁️ AWS SAA-C03</a>
+    <a href="#certifications" class="navbar__mobile-link">⎈ Kubernetes CKA</a>
+    <a href="#certifications" class="navbar__mobile-link">🤖 AWS ML Specialty</a>
     <a href="about.html"      class="navbar__mobile-link">ℹ️ About</a>
     <a href="contact.html"    class="navbar__mobile-link">✉️ Contact</a>
   </div>
@@ -229,42 +237,43 @@
       <div class="platform-hero__bg-grid" aria-hidden="true"></div>
       <div class="platform-hero__glow"   aria-hidden="true"></div>
       <div class="platform-hero__glow-2" aria-hidden="true"></div>
+      <div class="platform-hero__glow-3" aria-hidden="true"></div>
 
       <div class="platform-hero__inner">
         <!-- Left: copy -->
         <div class="platform-hero__left">
           <div class="platform-hero__eyebrow">
             <span class="platform-hero__eyebrow-dot" aria-hidden="true"></span>
-            Cloud &amp; DevOps Certification Hub
+            AWS · Kubernetes · Machine Learning
           </div>
 
           <h1 class="platform-hero__title" id="hero-heading">
-            Cloud Learning<br><span>Portal</span>
+            DevOps &amp; Cloud<br><span>Certifications</span>
           </h1>
 
           <p class="platform-hero__subtitle">
-            One platform for every certification on your list. Deep study notes, structured
-            roadmaps, architecture breakdowns and exam guides — for AWS, Kubernetes, ML and
-            whatever comes next. Free, always.
+            One place to study for every certification on your list. Structured roadmaps,
+            deep topic notes, architecture patterns and exam guides — for AWS, Kubernetes
+            and ML. Built while learning, always free.
           </p>
 
           <div class="platform-hero__actions">
-            <a href="#certifications" class="btn btn--primary btn--lg">Explore Certifications →</a>
+            <a href="#certifications" class="btn btn--primary btn--lg">Browse Certifications →</a>
             <a href="roadmap.html"    class="btn btn--ghost-light btn--lg">SAA-C03 Roadmap</a>
           </div>
 
           <div class="platform-stats stagger">
             <div class="platform-stat fade-in">
               <div class="platform-stat__number">3</div>
-              <div class="platform-stat__label">Cert Tracks</div>
+              <div class="platform-stat__label">Certifications</div>
             </div>
             <div class="platform-stat fade-in">
-              <div class="platform-stat__number">1</div>
-              <div class="platform-stat__label">Active Now</div>
+              <div class="platform-stat__number">AWS</div>
+              <div class="platform-stat__label">Cloud</div>
             </div>
             <div class="platform-stat fade-in">
-              <div class="platform-stat__number">2</div>
-              <div class="platform-stat__label">Coming Soon</div>
+              <div class="platform-stat__number">K8s</div>
+              <div class="platform-stat__label">DevOps</div>
             </div>
             <div class="platform-stat fade-in">
               <div class="platform-stat__number">Free</div>
@@ -273,65 +282,67 @@
           </div>
         </div><!-- /left -->
 
-        <!-- Right: visual panels -->
+        <!-- Right: clean cert overview panel -->
         <div class="platform-hero__right" style="display:flex;flex-direction:column;gap:var(--space-4);">
 
-          <!-- Certification path panel (primary) -->
           <div class="hero__panel fade-in">
             <div class="hero__panel-header">
-              <span class="hero__panel-title">🎯 Certification Tracks</span>
-              <span class="hero__panel-badge hero__panel-badge--green">3 Tracks</span>
+              <span class="hero__panel-title">🎓 Certification Tracks</span>
             </div>
-            <div style="display:flex;flex-direction:column;gap:var(--space-2);">
+            <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+
               <div class="hero__cert-item">
                 <div class="hero__cert-icon hero__cert-icon--orange">☁️</div>
                 <div class="hero__cert-info">
                   <div class="hero__cert-name">AWS Solutions Architect – Associate</div>
-                  <div class="hero__cert-meta">SAA-C03 · In Progress</div>
+                  <div class="hero__cert-meta">SAA-C03 · Amazon Web Services</div>
                 </div>
-                <span class="hero__cert-status hero__cert-status--active">Active</span>
               </div>
+
+              <div style="height:1px;background:rgba(255,255,255,0.06);margin:var(--space-1) 0;"></div>
+
               <div class="hero__cert-item">
                 <div class="hero__cert-icon hero__cert-icon--blue">⎈</div>
                 <div class="hero__cert-info">
                   <div class="hero__cert-name">Certified Kubernetes Administrator</div>
-                  <div class="hero__cert-meta">CKA · Coming Soon</div>
+                  <div class="hero__cert-meta">CKA · Cloud Native Computing Foundation</div>
                 </div>
-                <span class="hero__cert-status hero__cert-status--locked">Soon</span>
               </div>
+
+              <div style="height:1px;background:rgba(255,255,255,0.06);margin:var(--space-1) 0;"></div>
+
               <div class="hero__cert-item">
-                <div class="hero__cert-icon" style="background:rgba(107,70,193,0.15);">🤖</div>
+                <div class="hero__cert-icon" style="background:rgba(107,70,193,0.18);">🤖</div>
                 <div class="hero__cert-info">
                   <div class="hero__cert-name">AWS Machine Learning Specialty</div>
-                  <div class="hero__cert-meta">MLS-C01 · Planned</div>
+                  <div class="hero__cert-meta">MLS-C01 · Amazon Web Services</div>
                 </div>
-                <span class="hero__cert-status hero__cert-status--locked">Planned</span>
               </div>
+
             </div>
           </div>
 
-          <!-- SAA-C03 active study progress (secondary — shows what's live now) -->
+          <!-- What you get panel -->
           <div class="hero__panel fade-in">
             <div class="hero__panel-header">
-              <span class="hero__panel-title">📖 Currently Studying — SAA-C03</span>
-              <span class="hero__panel-badge">In Progress</span>
+              <span class="hero__panel-title">📦 What Each Track Includes</span>
             </div>
-            <div class="hero__progress-list">
-              <div class="hero__progress-item">
-                <div class="hero__progress-label"><span>Identity &amp; Security (IAM, KMS)</span><span>40%</span></div>
-                <div class="hero__progress-bar"><div class="hero__progress-fill" data-width="40" style="width:0%"></div></div>
+            <div style="display:flex;flex-direction:column;gap:var(--space-2);">
+              <div style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-xs);color:rgba(255,255,255,0.65);">
+                <span style="width:28px;height:28px;border-radius:var(--radius-md);background:rgba(255,153,0,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;">🗺️</span>
+                Structured learning roadmap
               </div>
-              <div class="hero__progress-item">
-                <div class="hero__progress-label"><span>Compute (EC2, Lambda)</span><span>25%</span></div>
-                <div class="hero__progress-bar"><div class="hero__progress-fill hero__progress-fill--blue" data-width="25" style="width:0%"></div></div>
+              <div style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-xs);color:rgba(255,255,255,0.65);">
+                <span style="width:28px;height:28px;border-radius:var(--radius-md);background:rgba(50,108,229,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;">📚</span>
+                Deep-dive topic notes
               </div>
-              <div class="hero__progress-item">
-                <div class="hero__progress-label"><span>Storage (S3, EBS, EFS)</span><span>15%</span></div>
-                <div class="hero__progress-bar"><div class="hero__progress-fill hero__progress-fill--green" data-width="15" style="width:0%"></div></div>
+              <div style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-xs);color:rgba(255,255,255,0.65);">
+                <span style="width:28px;height:28px;border-radius:var(--radius-md);background:rgba(107,70,193,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;">🏗️</span>
+                Architecture patterns &amp; diagrams
               </div>
-              <div class="hero__progress-item">
-                <div class="hero__progress-label"><span>Networking (VPC, Route 53)</span><span>10%</span></div>
-                <div class="hero__progress-bar"><div class="hero__progress-fill" data-width="10" style="width:0%"></div></div>
+              <div style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-xs);color:rgba(255,255,255,0.65);">
+                <span style="width:28px;height:28px;border-radius:var(--radius-md);background:rgba(29,131,72,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;">🎯</span>
+                Exam guide &amp; domain breakdown
               </div>
             </div>
           </div>
@@ -346,21 +357,20 @@
     <section class="section section--alt" id="certifications" aria-labelledby="certs-heading">
       <div class="container">
         <div class="section-header section-header--centered fade-in">
-          <p class="section-label">Available Tracks</p>
+          <p class="section-label">What You Can Study</p>
           <h2 class="section-title" id="certs-heading">Certifications on This Platform</h2>
           <p class="section-subtitle">
-            Each certification gets its own dedicated track — roadmap, topic deep-dives,
-            architecture patterns and exam strategy. Tracks open as they're built.
+            Each certification gets its own dedicated track — roadmap, deep-dive notes,
+            architecture patterns and exam strategy.
           </p>
         </div>
 
         <div class="cert-grid stagger">
 
-          <!-- AWS SAA-C03 — Active -->
+          <!-- AWS SAA-C03 -->
           <article class="cert-card fade-in" aria-label="AWS Solutions Architect Associate">
             <div class="cert-card__header">
               <div class="cert-card__icon cert-card__icon--aws">☁️</div>
-              <span class="cert-card__badge cert-card__badge--active">● Active</span>
             </div>
             <div class="cert-card__body">
               <div>
@@ -383,21 +393,15 @@
                 <span class="cert-card__topic">+10 more</span>
               </div>
             </div>
-            <div class="cert-card__footer">
-              <span class="cert-card__progress-label">Progress</span>
-              <div class="cert-card__progress-bar">
-                <div class="cert-card__progress-fill" style="width:22%"></div>
-              </div>
-              <span style="font-size:var(--text-xs);color:var(--color-text-muted);font-weight:var(--font-semibold);">22%</span>
-              <a href="services/iam.html" class="btn btn--primary btn--sm">Start →</a>
+            <div class="cert-card__footer" style="justify-content:flex-end;">
+              <a href="roadmap.html" class="btn btn--primary btn--sm">View Roadmap →</a>
             </div>
           </article>
 
-          <!-- CKA — Coming Soon -->
+          <!-- CKA -->
           <article class="cert-card fade-in" aria-label="Certified Kubernetes Administrator">
             <div class="cert-card__header">
               <div class="cert-card__icon cert-card__icon--k8s">⎈</div>
-              <span class="cert-card__badge cert-card__badge--soon">Coming Soon</span>
             </div>
             <div class="cert-card__body">
               <div>
@@ -418,21 +422,15 @@
                 <span class="cert-card__topic">Troubleshooting</span>
               </div>
             </div>
-            <div class="cert-card__footer">
-              <span class="cert-card__progress-label">Progress</span>
-              <div class="cert-card__progress-bar">
-                <div class="cert-card__progress-fill cert-card__progress-fill--blue" style="width:0%"></div>
-              </div>
-              <span style="font-size:var(--text-xs);color:var(--color-text-muted);font-weight:var(--font-semibold);">0%</span>
-              <span class="btn btn--coming-soon btn--sm">Not yet open</span>
+            <div class="cert-card__footer" style="justify-content:flex-end;">
+              <a href="#certifications" class="btn btn--outline-blue btn--sm">View Details</a>
             </div>
           </article>
 
-          <!-- AWS ML Specialty — Planned -->
+          <!-- AWS ML Specialty -->
           <article class="cert-card fade-in" aria-label="AWS Machine Learning Specialty">
             <div class="cert-card__header">
               <div class="cert-card__icon cert-card__icon--ml">🤖</div>
-              <span class="cert-card__badge cert-card__badge--planned">Planned</span>
             </div>
             <div class="cert-card__body">
               <div>
@@ -452,13 +450,8 @@
                 <span class="cert-card__topic">MLOps</span>
               </div>
             </div>
-            <div class="cert-card__footer">
-              <span class="cert-card__progress-label">Progress</span>
-              <div class="cert-card__progress-bar">
-                <div class="cert-card__progress-fill cert-card__progress-fill--purple" style="width:0%"></div>
-              </div>
-              <span style="font-size:var(--text-xs);color:var(--color-text-muted);font-weight:var(--font-semibold);">0%</span>
-              <span class="btn btn--coming-soon btn--sm">Not yet open</span>
+            <div class="cert-card__footer" style="justify-content:flex-end;">
+              <a href="#certifications" class="btn btn--ghost btn--sm">View Details</a>
             </div>
           </article>
 
@@ -548,13 +541,13 @@
 
           <!-- Brand -->
           <div class="footer__brand">
-            <a href="index.html" class="footer__brand-logo" aria-label="Cloud Learning Portal home">
-              <div class="footer__brand-icon" aria-hidden="true">CLP</div>
-              <span class="footer__brand-name">Cloud Learning Portal</span>
+            <a href="index.html" class="footer__brand-logo" aria-label="DevOps & Cloud Certifications Hub home">
+              <div class="footer__brand-icon" aria-hidden="true">DCH</div>
+              <span class="footer__brand-name">DevOps &amp; Cloud Certifications</span>
             </a>
             <p class="footer__brand-desc">
-              A self-hosted, multi-certification study platform covering AWS, Kubernetes,
-              ML and more. Built for learners, by a learner. Free forever.
+              A self-hosted, multi-certification study platform covering AWS, Kubernetes
+              and ML. Built while learning, free forever.
             </p>
             <div class="footer__social">
               <a href="#" class="footer__social-link" aria-label="GitHub">🐙</a>
@@ -567,9 +560,9 @@
           <div>
             <div class="footer__col-title">Certifications</div>
             <ul class="footer__links">
-              <li><a href="roadmap.html"      class="footer__link">☁️ AWS SAA-C03 <span class="badge badge--orange" style="margin-left:4px;">Active</span></a></li>
-              <li><a href="#certifications"   class="footer__link">⎈ CKA <span class="badge badge--blue" style="margin-left:4px;">Soon</span></a></li>
-              <li><a href="#certifications"   class="footer__link">🤖 AWS ML Specialty <span class="badge badge--gray" style="margin-left:4px;">Planned</span></a></li>
+              <li><a href="roadmap.html"    class="footer__link">☁️ AWS SAA-C03</a></li>
+              <li><a href="#certifications" class="footer__link">⎈ Kubernetes CKA</a></li>
+              <li><a href="#certifications" class="footer__link">🤖 AWS ML Specialty</a></li>
             </ul>
           </div>
 
@@ -607,7 +600,7 @@
       </p>
       <div class="footer__bottom">
         <div class="footer__bottom-inner">
-          <p class="footer__copy">© <span id="footer-year"></span> Cloud Learning Portal — Free &amp; Open Source</p>
+          <p class="footer__copy">© <span id="footer-year"></span> DevOps &amp; Cloud Certifications Hub — Free &amp; Open Source</p>
           <nav class="footer__legal" aria-label="Legal links">
             <a href="#" class="footer__legal-link">Privacy</a>
             <a href="#" class="footer__legal-link">Disclaimer</a>
